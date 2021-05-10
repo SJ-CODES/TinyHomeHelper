@@ -1,12 +1,30 @@
 import React from 'react';
+import "bootswatch/dist/minty/bootstrap.min.css";
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from './Components/Home';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import AboutUs from "./Components/AboutUs";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Header/>
+            <Home/>
+          <Footer/>
+        </Route>
+        <Route exact path="/about-us">
+          <Header/>
+          <AboutUs/>
+          <Footer/>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
