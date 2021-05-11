@@ -3,13 +3,16 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const userRouter = require("./routes/route.users");
+const postRoutes = require('./routes/route.posts');
+// const userRouter = require("./routes/route.users");
 
 const app = express();
 
 app.use(cors());
 
-app.use("/user", userRouter);
+app.use('/posts' , postRoutes);
+
+
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT || 8080;
