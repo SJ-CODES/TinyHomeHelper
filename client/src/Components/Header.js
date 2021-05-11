@@ -13,8 +13,8 @@ function Header() {
             <Nav.Link href="/about-us">About Us</Nav.Link>
             <NavDropdown title="Community" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Login/Register</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Homepage of Community
+              <NavDropdown.Item href="/community-forum">
+                Community Forum
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Option #2</NavDropdown.Item>
               <NavDropdown.Divider />
