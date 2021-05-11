@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TinyHomeChecklist from './components/TinyHomeChecklist'
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+          <Route exact path='/TinyHomeChecklist' component= {TinyHomeChecklist}/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
