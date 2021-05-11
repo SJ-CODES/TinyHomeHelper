@@ -1,16 +1,42 @@
 import React from 'react';
+import "bootswatch/dist/minty/bootstrap.min.css";
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TinyHomeChecklist from './components/TinyHomeChecklist'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from './components/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AboutUs from "./components/AboutUs";
+import TinyHomeChecklist from "./components/TinyHomeChecklist"
+import PhotoGallery from "./components/PhotoGallery"
+import App from './App'
+import UploadForm from './components/UploadForm';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-          <Route exact path='/TinyHomeChecklist' component= {TinyHomeChecklist}/>
-    </BrowserRouter>
+      <BrowserRouter>
+            
+          <Switch>
+              <Route exact path="/" component={App}>
+                  <Header/>
+                  <Home/>
+                  <Footer/>
+                </Route>
+                <Route exact path="/about-us"component={AboutUs} >
+                  <Header/>
+                  <AboutUs/>
+                  <Footer/>
+                </Route>
+                <Route exact path="/TinyHomeChecklist" component= {TinyHomeChecklist}>
+                  <Header/>
+                </Route>
+                <Route exact path ="/PhotoGallery" component= {PhotoGallery}>
+                  <Header/>
+                  <UploadForm />
+                </Route>
+          </Switch>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
