@@ -3,7 +3,14 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
+
+
 app.use(cors());
+
+
+const postRoutes = require('./routes/route.posts');
+app.use('/posts' , postRoutes);
+
 
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
