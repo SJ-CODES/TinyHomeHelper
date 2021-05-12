@@ -1,16 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./CSS/Post.css";
 import { Avatar } from '@material-ui/core';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-// import NearMeIcon from '@material-ui/icons/NearMe';
-import { ExpandMoreOutlined } from '@material-ui/icons';
+import axios from "axios";
 
 //here we need to map through our database that has all of ours posts
 
 function Post({ userPic, image, username, timestamp, message }) {
+
+  const [posts, getPosts] = useState("")
+
+  //what is the url for our mongo db??
+  const url = "";
+
+  useEffect(() => {
+    getAllPosts();
+  }, []);
+
+  const getAllPosts = () => {
+    axios.get(`${url}posts`)
+    .then((response) => {
+      const allPosts = response.data.posts.allPosts;
+      //add our data to the state
+      getPosts(allPosts);
+    })
+    .catch(error => console.error(`Error: ${error}`));
+  }
+
   return (
+    //where do I want to pass the props to?
+    // <Feed posts = {posts}/>
     <div className="post">
       <div className="post__top">
         <Avatar src={userPic} className="post__avatar" />
@@ -35,14 +55,6 @@ function Post({ userPic, image, username, timestamp, message }) {
           <ChatBubbleOutlineIcon />
           <p>Comment</p>
         </div>
-        {/* <div className="post__option">
-          <NearMeIcon />
-          <p>Share</p>
-        </div>
-        <div className="post__option">
-          <AccountCircleIcon />
-          <ExpandMoreOutlined />
-        </div> */}
       </div>
     </div>
   );

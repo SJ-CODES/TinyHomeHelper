@@ -4,8 +4,8 @@ const postSchema = mongoose.Schema({
     title: String,
     body: String,
     user: String,
-    // tags: [String],
-    // selectedFile: String,
+    tags: [String],
+    selectedFile: String,
     comment: String,
     likes: {
         type: [String],

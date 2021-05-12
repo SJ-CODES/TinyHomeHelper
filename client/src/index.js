@@ -1,15 +1,21 @@
-import React from "react";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import "bootswatch/dist/minty/bootstrap.min.css";
-import ReactDOM from "react-dom";
-import "./Components/CSS/index.css";
-import reportWebVitals from "./reportWebVitals";
-import App from "./App";
+import './Components/CSS/index.css';
+import reportWebVitals from './reportWebVitals';
+import App from './App'
+import { createStore } from 'redux';
+import reducer from "./store/reducers/reducer"
+import { Provider } from 'react-redux';
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <Provider store={store}>
+      <App/>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

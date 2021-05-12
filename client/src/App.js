@@ -13,6 +13,8 @@ import AboutUs from "./Components/AboutUs";
 import PhotoGallery from "./Components/PhotoGallery";
 // import UploadForm from './Components/UploadForm';
 import CommunityForum from "./Components/CommunityForum";
+import PhotoGallery from "./Components/PhotoGallery";
+import CommunityForum from "./Components/CommunityForum";
 
 function App() {
 	return (

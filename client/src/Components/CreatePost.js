@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
+import axios from "axios";
 
 function CreatePost() {
   const [input, setInput] = useState("");
