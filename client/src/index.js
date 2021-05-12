@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 import "bootswatch/dist/minty/bootstrap.min.css";
+=======
+>>>>>>> 0bcbf34740a82d8adbe48f735f2089e047c5fb72
 import './Components/CSS/index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App'
