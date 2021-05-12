@@ -1,11 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
-const { getPhotos } = require('../controllers/controller.gallery.js')
+const { getPosts } = require('../controllers/controller.posts.js')
 
 const router = express.Router();
 
-router.get('/gallery', getPhotos);
+router.get('/', getPosts);
 
 
 module.exports = router; 
