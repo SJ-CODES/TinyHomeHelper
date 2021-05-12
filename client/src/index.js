@@ -1,6 +1,7 @@
 import React from 'react';
 import "bootswatch/dist/minty/bootstrap.min.css";
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -12,6 +13,7 @@ import TinyHomeChecklist from "./components/TinyHomeChecklist"
 import PhotoGallery from "./components/PhotoGallery"
 import App from './App'
 import UploadForm from './components/UploadForm';
+import CommunityForum from './Components/CommunityForum';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -35,8 +37,13 @@ ReactDOM.render(
                   <Header/>
                   <UploadForm />
                 </Route>
+                  <Route exact path="/community-forum">
+                  <CommunityForum/>
+                  <Footer/>
+                </Route>
           </Switch>
       </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
