@@ -20,11 +20,14 @@ const UploadForm = () => {
 
         }
     }
-    // const handleSubmitFile
+    const handleSubmitFile = () =>{
+        fetch()
+        
+    }
     return (
         <form>
             <input type ="file" onChange={changeHandler}  />
-            <button>Submit</button>
+            <button onClick="handleSubmitFile">Submit</button>
             <div className="output">
                 { error && <div className="error">{error} </div>}
                 {file && <div> {file.name}</div>}
