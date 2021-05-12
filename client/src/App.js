@@ -3,15 +3,12 @@ import React, {Component} from 'react'
 import TinyHomeChecklist from './Components/TinyHomeChecklist'
 import UploadForm from './Components/UploadForm';
 import "bootswatch/dist/minty/bootstrap.min.css";
-import './Components/CSS/Index.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from './Components/Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
-// import TinyHomeChecklist from "./Components/TinyHomeChecklist"
 import PhotoGallery from "./Components/PhotoGallery"
-// import UploadForm from './Components/UploadForm';
 import CommunityForum from './Components/CommunityForum';
 
 function App() {
