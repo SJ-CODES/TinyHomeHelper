@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
+import CommunityForum from './Components/CommunityForum';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,10 @@ ReactDOM.render(
         <Route exact path="/about-us">
           <Header/>
           <AboutUs/>
+          <Footer/>
+        </Route>
+        <Route exact path="/community-forum">
+          <CommunityForum/>
           <Footer/>
         </Route>
       </Switch>
