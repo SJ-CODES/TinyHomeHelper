@@ -28,30 +28,14 @@
     background-color: #eff2f5;
   }
   
+  .createPost__input {
+    flex: 1;
+  }
+
+  @media (min-width: 1281px) {
   /* this hides the button so the user has to hit the enter button */
   .createPost__top > form > button {
     display: none;
   }
-  
-  .createPost__input {
-    flex: 1;
-  }
-  
-  .createPost__option {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    color: gray;
-    margin: 5px;
-  }
-  
-  .createPost__option > h3 {
-    font-size: medium;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .createPost__option:hover {
-    background-color: #eff2f5;
-    border-radius: 20px;
+    
   }

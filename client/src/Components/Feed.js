@@ -1,12 +1,15 @@
 import React from 'react'
-import "../Feed.css"
+import "./CSS/Feed.css";
 import CreatePost from "./CreatePost"
+import Post from "./Post"
 
 function Feed() {
     return (
         <div className="feed">
             <CreatePost/>
-            
+            <Post/>
+            <Post/>
+            <Post/>
         </div>
     )
 }

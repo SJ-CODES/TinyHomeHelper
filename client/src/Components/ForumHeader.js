@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../ForumHeader.css";
+import "./CSS/ForumHeader.css";
 import SearchIcon from "@material-ui/icons/Search"
 import HomeIcon from "@material-ui/icons/Home"
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';

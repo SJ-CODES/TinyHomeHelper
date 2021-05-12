@@ -1,5 +1,5 @@
 import React from 'react'
-import "../ForumSidebar.css"
+import "./CSS/ForumSidebar.css";
 import SidebarRow from "./SidebarRow"
 
 function ForumSidebar() {

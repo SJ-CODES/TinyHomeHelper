@@ -1,7 +1,7 @@
 import React from 'react';
 import "bootswatch/dist/minty/bootstrap.min.css";
 import ReactDOM from 'react-dom';
-import './index.css';
+import './Components/CSS/index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from './Components/Home';

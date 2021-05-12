@@ -3,7 +3,7 @@ import ForumPost from "./ForumPost";
 import ForumHeader from "./ForumHeader";
 import ForumSidebar from "./ForumSidebar";
 import Feed from "./Feed";
-import "../CommunityForum.css";
+import "./CSS/CommunityForum.css";
 
 function CommunityForum() {
   return (
