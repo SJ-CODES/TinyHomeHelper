@@ -3,7 +3,6 @@ import React, {Component} from 'react'
 import TinyHomeChecklist from './Components/TinyHomeChecklist'
 import UploadForm from './Components/UploadForm';
 import "bootswatch/dist/minty/bootstrap.min.css";
-import './Components/CSS/Index.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from './Components/Home';
 import Header from './Components/Header';
