@@ -1,15 +1,36 @@
 import React from 'react';
+import "bootswatch/dist/minty/bootstrap.min.css";
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './Components/CSS/index.css';
 import reportWebVitals from './reportWebVitals';
 import TinyHomeChecklist from './components/TinyHomeChecklist'
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Home from './Components/Home';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import AboutUs from "./Components/AboutUs";
+import CommunityForum from './Components/CommunityForum';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
           <Route exact path='/TinyHomeChecklist' component= {TinyHomeChecklist}/>
+      <Switch>
+        <Route exact path="/">
+          <Header/>
+            <Home/>
+          <Footer/>
+        </Route>
+        <Route exact path="/about-us">
+          <Header/>
+          <AboutUs/>
+          <Footer/>
+        </Route>
+        <Route exact path="/community-forum">
+          <CommunityForum/>
+          <Footer/>
+        </Route>
+      </Switch>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
