@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+
+import { getPosts } from '../../actions/posts';
 
 function Home() {
-    return (
-        <div className="home">
-            <h1>This is the homepage</h1>
-        </div>
-    )
+    useEffect(() => {
+        dispatchEvent(getPosts())
+    }, [currentId, dispatch])
 }
 
 export default Home
