@@ -1,4 +1,4 @@
-export default (posts = [], action) => { 
+const postsReducer = (posts = [], action) => { 
     // state is replaced with posts as the state takes place within the posts reducer
     // cases return action.payload which is the post retrieved from api in the actions
     switch (action.type) {
@@ -8,3 +8,5 @@ export default (posts = [], action) => {
             return posts 
     }
 }
+
+export default postsReducer
