@@ -3,34 +3,16 @@ import "./CSS/Post.css";
 import { Avatar } from '@material-ui/core';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import axios from "axios";
+import { useDispatch } from 'react-redux';
+import { likePost, deletePost } from '../../../actions/posts';
 
 //here we need to map through our database that has all of ours posts
 
 function Post({ userPic, image, username, timestamp, message }) {
 
-  const [posts, getPosts] = useState("")
-
-  //what is the url for our mongo db??
-  const url = "";
-
-  useEffect(() => {
-    getAllPosts();
-  }, []);
-
-  const getAllPosts = () => {
-    axios.get(`${url}posts`)
-    .then((response) => {
-      const allPosts = response.data.posts.allPosts;
-      //add our data to the state
-      getPosts(allPosts);
-    })
-    .catch(error => console.error(`Error: ${error}`));
-  }
+  const dispatch = useDispatch();
 
   return (
-    //where do I want to pass the props to?
-    // <Feed posts = {posts}/>
     <div className="post">
       <div className="post__top">
         <Avatar src={userPic} className="post__avatar" />
