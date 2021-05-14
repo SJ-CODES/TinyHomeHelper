@@ -1,5 +1,5 @@
 import './Components/CSS/App.css';
-import React, {Component} from 'react'
+import React from 'react';
 import TinyHomeChecklist from './Components/TinyHomeChecklist'
 import UploadForm from './Components/UploadForm';
 import "bootswatch/dist/minty/bootstrap.min.css";
@@ -10,6 +10,7 @@ import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
 import PhotoGallery from "./Components/PhotoGallery"
 import CommunityForum from './Components/CommunityForum';
+import ForumHeader from './Components/ForumHeader';
 
 function App() {
   return (
