@@ -7,8 +7,10 @@ const postRoutes = require('./routes/route.posts');
 
 const app = express();
 
+
 app.use(cors());
 
+app.use(express.json())
 app.use('/posts' , postRoutes);
 
 
