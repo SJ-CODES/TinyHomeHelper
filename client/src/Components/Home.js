@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux';
 
-import { getPosts } from '../actions/postActions';
+import React from 'react'
+
 
 function Home() {
     return (
@@ -12,3 +11,4 @@ function Home() {
 }
 
 export default Home
+
