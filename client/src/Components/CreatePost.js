@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { createPost, updatePost } from "../actions/postActions";
+import { createPost, updatePost, getPosts } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
@@ -17,7 +17,7 @@ function CreatePost({ currentId, setCurrentId }) {
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
-    message: "",
+    body: "",
     tags: "",
     selectedFile: "",
   });
@@ -34,7 +34,7 @@ function CreatePost({ currentId, setCurrentId }) {
 
   const clear = () => {
     // setCurrentId(0);
-    setPostData({ title: "", message: "", tags: "", selectedFile: "" });
+    setPostData({ title: "", body: "", tags: "", selectedFile: "" });
   };
 
   useEffect(() => {
@@ -49,7 +49,9 @@ function CreatePost({ currentId, setCurrentId }) {
 
     // if (currentId === 0) {
     dispatch(createPost(postData));
+    dispatch(getPosts());
     clear();
+    
     // } else {
     //   dispatch(updatePost(currentId, postData));
     //   clear();
@@ -75,15 +77,15 @@ function CreatePost({ currentId, setCurrentId }) {
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
         <TextField
-          name="message"
+          name="body"
           variant="outlined"
-          label="Message"
+          label="Body"
           fullWidth
           multiline
           rows={4}
-          value={postData.message}
+          value={postData.body}
           onChange={(e) =>
-            setPostData({ ...postData, message: e.target.value })
+            setPostData({ ...postData, body: e.target.value })
           }
         />
         <TextField

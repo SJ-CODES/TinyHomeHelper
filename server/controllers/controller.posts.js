@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 // const { update } = require('../models/model.postSchema.js')
 
 const PostMessage = require('../models/model.postSchema.js')
-const { post } = require('../routes/route.posts.js')
+// const { post } = require('../routes/route.posts.js')
 
 // const router = express.Router();
 
@@ -18,8 +18,9 @@ exports.getPosts = async (req, res) => {
 }
 
 exports.createPost = async (req, res) => {
+    console.log(req.body)
     // const post = req.body
-    const { title, body, user, tags, comments } = req.body 
+    const { title, body, tags } = req.body 
     // const title = req.body.title
     // const body = req.body.body
     // const user = req.body.user
@@ -27,7 +28,7 @@ exports.createPost = async (req, res) => {
     // const comments = req.body.comments
 
 
-    const newPost = new PostMessage({ title, body, user, tags, comments, creator: req.userId, createdAt: new Date().toISOString() })
+    const newPost = new PostMessage({ title, body, tags, creator: req.userId, createdAt: new Date().toISOString() })
 
 
     try {
