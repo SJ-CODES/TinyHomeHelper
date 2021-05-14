@@ -18,8 +18,7 @@ function CommunityForum() {
       </div>
 
       <div className="communityForum__body">
-        <ForumPost />
-        <ForumSidebar />
+        {/* <ForumSidebar /> */}
         <Feed />
       </div>
     </div>

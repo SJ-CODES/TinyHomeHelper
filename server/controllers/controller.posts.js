@@ -10,7 +10,7 @@ const { post } = require('../routes/route.posts.js')
 exports.getPosts = async (req, res) => {
     try {
         const postMessages = await PostMessage.find()
-
+        console.log(postMessages)
         res.status(200).json(postMessages)
     } catch (error) {
         res.status(404).json({ message: error.message })
@@ -26,7 +26,9 @@ exports.createPost = async (req, res) => {
     // const tags = req.body.tags
     // const comments = req.body.comments
 
+
     const newPost = new PostMessage({ title, body, user, tags, comments, creator: req.userId, createdAt: new Date().toISOString() })
+
 
     try {
         await newPost.save()

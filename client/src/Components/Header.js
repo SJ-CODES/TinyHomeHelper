@@ -14,7 +14,7 @@ function Header() {
           <Nav className="mr-auto">
             <Nav.Link href="/about-us">About Us</Nav.Link>
             <NavDropdown title="Community" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Login/Register</NavDropdown.Item>
+              <NavDropdown.Item href="/login">Login/Register</NavDropdown.Item>
 
               <NavDropdown.Item href="/community-forum">
                 Community Forum
