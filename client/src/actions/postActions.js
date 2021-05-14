@@ -1,3 +1,4 @@
+
 import * as api from "../api/api";
 import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from "../constants/postActionTypes";
 
@@ -86,3 +87,4 @@ export const deletePost = (id) => async (dispatch) => {
     console.log(error);
   }
 };
+
