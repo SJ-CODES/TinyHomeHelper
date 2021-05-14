@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, Typography, Paper } from '@material-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
-import FileBase from 'react-file-base64';
-import { createPost, updatePost } from '../actions/postActions';
+import React, { useState, useEffect } from "react";
+import { TextField, Button, Typography, Paper } from "@material-ui/core";
+import { useDispatch, useSelector } from "react-redux";
+// import FileBase from 'react-file-base64';
+import { createPost, updatePost } from "../actions/postActions";
+import { useHistory } from "react-router-dom";
 
 //still need to add styling, but want to see how this looks in react first
+//where are these props coming from??
 
-function CreatePost() {
+function CreatePost({ currentId, setCurrentId }) {
+
+  //setting the state for our posts to hold our data - this is the schema for mongo
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
@@ -14,60 +18,51 @@ function CreatePost() {
     tags: "",
     selectedFile: "",
   });
+
+  //useSelector allows you to extract data from the Redux store state so here we're grabbing our data from the state
   const post = useSelector((state) =>
-    currentId ? state.posts.find((message) => message._id === currentId) : null
+    currentId
+      ? state.posts.posts.find((message) => message._id === currentId)
+      : null
   );
   const dispatch = useDispatch();
-  const classes = useStyles();
-
-  useEffect(() => {
-    if (post) setPostData(post);
-  }, [post]);
+  const user = JSON.parse(localStorage.getItem("profile"));
+  const history = useHistory();
 
   const clear = () => {
-    setCurrentId(0);
-    setPostData({
-      creator: "",
-      title: "",
-      message: "",
-      tags: "",
-      selectedFile: "",
-    });
+    // setCurrentId(0);
+    setPostData({ title: "", message: "", tags: "", selectedFile: "" });
   };
 
+  useEffect(() => {
+    if (!post?.title) clear();
+    if (post) setPostData(post);
+
+  }, [post]);
+
   const handleSubmit = async (e) => {
+    console.log(postData)
     e.preventDefault();
 
-    if (currentId === 0) {
-      dispatch(createPost(postData));
-      clear();
-    } else {
-      dispatch(updatePost(currentId, postData));
-      clear();
-    }
+    // if (currentId === 0) {
+    dispatch(createPost(postData));
+    clear();
+    // } else {
+    //   dispatch(updatePost(currentId, postData));
+    //   clear();
+    // }
   };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper>
       <form
         autoComplete="off"
         noValidate
-        className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
         <Typography variant="h6">
-          {currentId ? `Editing "${post.title}"` : "Creating a Memory"}
+          {currentId ? `Editing "${post?.title}"` : "Start a Discussion"}
         </Typography>
-        <TextField
-          name="creator"
-          variant="outlined"
-          label="Creator"
-          fullWidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({ ...postData, creator: e.target.value })
-          }
-        />
         <TextField
           name="title"
           variant="outlined"
@@ -98,7 +93,7 @@ function CreatePost() {
             setPostData({ ...postData, tags: e.target.value.split(",") })
           }
         />
-        <div className={classes.fileInput}>
+        {/* <div>
           <FileBase
             type="file"
             multiple={false}
@@ -106,9 +101,8 @@ function CreatePost() {
               setPostData({ ...postData, selectedFile: base64 })
             }
           />
-        </div>
+        </div> */}
         <Button
-          className={classes.buttonSubmit}
           variant="contained"
           color="primary"
           size="large"

@@ -8,7 +8,7 @@ const PostMessage = require('../models/model.postSchema.js')
 exports.getPosts = async (req, res) => {
     try {
         const postMessages = await PostMessage.find()
-
+        console.log(postMessages)
         res.status(200).json(postMessages)
     } catch (error) {
         res.status(404).json({ message: error.message })
@@ -17,6 +17,8 @@ exports.getPosts = async (req, res) => {
 
 exports.createPost = async (req, res) => {
     const post = req.body
+
+    // const { title, body, user } = req.body
 
     const newPost = new PostMessage({ ...post, creator: req.userId, createdAt: new Date().toISOString() })
 
