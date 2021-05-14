@@ -1,4 +1,4 @@
-import * as api from '../api'
+import * as api from '../api/api'
 
 // Action Creators
 export const getPosts = () => async (dispatch) => {
@@ -10,3 +10,6 @@ export const getPosts = () => async (dispatch) => {
         console.log(error.message)
     }
 }
+
+//no action types
+//no payloads

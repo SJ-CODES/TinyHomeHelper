@@ -8,8 +8,10 @@ import Home from './Components/Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
-import PhotoGallery from "./Components/PhotoGallery"
+import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay"
 import CommunityForum from './Components/CommunityForum';
+
+
 
 function App() {
   return (
@@ -31,9 +33,10 @@ function App() {
                 <Route exact path="/TinyHomeChecklist" component= {TinyHomeChecklist}>
                   <Header/>
                 </Route>
-                <Route exact path ="/PhotoGallery" component= {PhotoGallery}>
+                <Route exact path ="/PhotoGalleryDisplay" component= {PhotoGalleryDisplay}>
                   <Header/>
                   <UploadForm />
+                  <PhotoGalleryDisplay />
                 </Route>
                   <Route exact path="/community-forum">
                   <CommunityForum/>
@@ -41,6 +44,7 @@ function App() {
                 </Route>
           </Switch>
       </BrowserRouter>
+      
 
     </div>
   );
