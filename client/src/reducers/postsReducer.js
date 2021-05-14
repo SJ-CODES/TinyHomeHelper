@@ -1,5 +1,5 @@
 
-import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from '../../constants/postActionTypes';
+import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from '../constants/postActionTypes';
 
 export const postsReducer = (state = { isLoading: true, posts: [] }, action) => {
     // state is replaced with posts as the state takes place within the posts reducer
