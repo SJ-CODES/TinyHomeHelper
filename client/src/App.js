@@ -31,6 +31,7 @@ function App() {
                 </Route>
                 <Route exact path="/TinyHomeChecklist" component= {TinyHomeChecklist}>
                   <Header/>
+                  <TinyHomeChecklist/>
                 </Route>
                 <Route exact path ="/PhotoGallery" component= {PhotoGallery}>
                   <Header/>
