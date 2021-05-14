@@ -9,16 +9,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getPost, likePost, deletePost } from '../actions/postActions';
 import DeleteIcon from '@material-ui/icons/Delete';
-import postsReducer from '../reducers/postsReducer';
 
 function Post({ post, setCurrentId }) {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
-
-  const postTrial = useSelector(state => state.posts)
-  console.log(postTrial)
-  //map through
 
   const Likes = () => {
     if (post?.likes?.length > 0) {
@@ -39,19 +34,21 @@ function Post({ post, setCurrentId }) {
     console.log(post)
   };
 
-  return (
-    <div className="post">
+  // const postItem = allPosts.map((post) => {
+  //   console.log(postItem.user)
+    return (
+      <div className="post">
       <div className="post__top">
         {/* <Avatar src={} className="post__avatar" /> */}
         <div className="post__topInfo">
-          <h2>{postTrial.tags}</h2>
+          <h2>{post?.title}</h2>
           {/* <h3>{post.user}</h3> */}
           {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
         </div>
       </div>
       <div className="post__bottom">
         {/* <p>{post.message.split(' ').splice(0, 20).join(' ')}...</p> */}
-        <p>Post Body</p>
+        <p>{post?.body}</p>
       </div>
       <div className="post__options">
           <div className="post__option">
@@ -60,6 +57,7 @@ function Post({ post, setCurrentId }) {
           </div>
           <div className="post__option">
             <ChatBubbleOutlineIcon />
+            {/* so far we don't have comments enabled */}
             <p>Comment</p>
           </div>
           <div className="post__option">
@@ -71,7 +69,7 @@ function Post({ post, setCurrentId }) {
           </div>
         </div>
     </div>
-  )
+    )
 }
 
 export default Post;
