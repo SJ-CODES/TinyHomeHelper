@@ -1,3 +1,4 @@
+
 import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from '../constants/postActionTypes';
 
 export const postsReducer = (state = { isLoading: true, posts: [] }, action) => {
@@ -31,3 +32,4 @@ export const postsReducer = (state = { isLoading: true, posts: [] }, action) => 
           return state;
       }
     };
+

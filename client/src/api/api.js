@@ -1,6 +1,6 @@
+
 import axios from 'axios'
 
-//what is the base url here??
 const API = axios.create({ baseURL: "http://localhost:8080" });
 
 //storing the profile in local storage to keep the user logged in
@@ -21,3 +21,4 @@ export const createPost = (newPost) => API.post('/posts', newPost);
 export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
 export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
 export const deletePost = (id) => API.delete(`/posts/${id}`);
+

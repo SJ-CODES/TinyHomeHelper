@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-// import FileBase from 'react-file-base64';
 import { createPost, updatePost } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
+import "./CSS/CreatePost.css";
+
 
 //still need to add styling, but want to see how this looks in react first
 //where are these props coming from??
