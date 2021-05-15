@@ -8,20 +8,20 @@ function Home() {
         <div className="home">
             <h1>This is the homepage</h1>
             <div className="buttonOptions">
-            <Link to="/TinyHomeChecklist">
-                <button>
-                    Build
-                </button>
+                <Link to="/educationalresources">
+                    <button>
+                        Build
+                    </button>
                 </Link>
-                <Link>
-                <button>
-                    Inspire
-                </button>
+                <Link to="/PhotoGallery">
+                    <button>
+                        Inspire
+                    </button>
                 </Link>
                 <Link to="/CommunityForum">
-                <button>
-                    Connect
-                </button>
+                    <button>
+                        Connect
+                    </button>
                 </Link>
             </div>
         </div>

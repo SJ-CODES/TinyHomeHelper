@@ -10,9 +10,7 @@ import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay"
 import CommunityForum from './Components/CommunityForum';
-import ForumHeader from './Components/ForumHeader';
-
-
+import EducateHomepage from "./Components/EducateHomepage";
 
 function App() {
   return (
@@ -35,13 +33,18 @@ function App() {
                   <Header/>
                   <TinyHomeChecklist/>
                 </Route>
-                <Route exact path ="/PhotoGalleryDisplay" component= {PhotoGalleryDisplay}>
+                <Route exact path ="/PhotoGallery" component= {PhotoGalleryDisplay}>
                   <Header/>
                   <UploadForm />
                   <PhotoGalleryDisplay />
                 </Route>
-                  <Route exact path="/community-forum">
+                <Route exact path="/communityforum" component={CommunityForum}>
                   <CommunityForum/>
+                  <Footer/>
+                </Route>
+                <Route exact path="/educationalresources">
+                  <Header/>
+                  <EducateHomepage/>
                   <Footer/>
                 </Route>
           </Switch>
