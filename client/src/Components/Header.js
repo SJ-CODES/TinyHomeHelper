@@ -16,9 +16,8 @@ function Header() {
             <NavDropdown title="Community" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/login">Login/Register</NavDropdown.Item>
 
-              <NavDropdown.Item href="/community-forum">
+              <NavDropdown.Item href="/communityforum">
                 Community Forum
-
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Option #2</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -27,7 +26,7 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Resources" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Option #1</NavDropdown.Item>
+              <NavDropdown.Item href="/TinyHomeChecklist">Tiny Home Checklist</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
               Option #2
               </NavDropdown.Item>
