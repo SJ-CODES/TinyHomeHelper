@@ -7,7 +7,7 @@ const UploadForm = () => {
 
 
     const [image, setImage] = useState(null);
-
+    const [username, setUsername] = useState(null);
     const types = ['image/png', 'image/jpeg', 'image/gif', 'image/jpg'];
     const [error, setError] = useState(null);
 
@@ -16,6 +16,12 @@ const UploadForm = () => {
             setImage(e.target.files[0]);
         }
     };
+    const handleNameChange =  (e) =>{
+        setUsername({
+            ...username,
+            [e.target.name]: e.target.value
+        })
+    }
 
     const uploadHandler = (e) => {
         e.preventDefault()
@@ -45,7 +51,7 @@ const UploadForm = () => {
                                     'Content-Type': 'application/json'
                                 },
                                 body: JSON.stringify({
-                                    username: 'SJ',
+                                    username: username,
                                     imageFile: url
                                 })
                             }).then(response => response.json())
@@ -69,12 +75,14 @@ const UploadForm = () => {
             <div>
                 <form>
                     <input type="file" name="file" accept="image/*" multiple={false} onChange={handleChange} />
-                    <button onClick={uploadHandler}>Upload</button>
+                    <input type="text" name="username" onChange={handleNameChange} placeholder="Enter Username" />
+                   <button onClick={uploadHandler}>Upload</button> 
+                </form>
                     <div className="output">
                         {error && <div className="error">{error} </div>}
                         {image && <div> {image.name}</div>}
                     </div>
-                </form>
+                
                
             </div>
         )
