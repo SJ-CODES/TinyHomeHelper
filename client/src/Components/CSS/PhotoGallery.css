@@ -1,0 +1,5 @@
+.galleryFlexBox{
+    display: flex;
+    flex-direction: column;
+
+}

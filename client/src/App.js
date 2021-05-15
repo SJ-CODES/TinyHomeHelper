@@ -11,6 +11,7 @@ import AboutUs from "./Components/AboutUs";
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay"
 import CommunityForum from './Components/CommunityForum';
 import ForumHeader from './Components/ForumHeader';
+import './Components/CSS/PhotoGallery.css'
 
 
 
