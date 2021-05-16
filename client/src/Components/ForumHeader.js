@@ -11,36 +11,35 @@ function ForumHeader() {
     <div className="forumHeader">
       <div className="header__left">
         <Link to="/">
-          <h1>Tiny Homes</h1>
+          <h1>YourTinyHomeHelper</h1>
         </Link>
         <div className="header__input">
             <SearchIcon />
-            <input type="text" placeholder="Search">
-
-            </input>
+            <input type="text" placeholder="Search"></input>
       </div>
 
       <div className="header__center">
         <div className="header__option">
-            <HomeIcon fontSize="large"/>
+            <a href="/"><HomeIcon fontSize="large"/></a>
         </div>
         
         <div className="header__option">
-            <PhotoLibraryIcon fontSize="large"/>
+            <a href="/photoGallery"><PhotoLibraryIcon fontSize="large"/></a>
         </div>
 
         </div>
         <div className="header__right">
-            <div className="header__info">
+            {/* <div className="header__info">
                 <Avatar fontSize="large"/>
                 <h4>Username</h4>
-            </div>
+            </div> */}
             <div className="header__links">
                 <Link>
-                    <h3>Login</h3>
+                    <button ><h3>Login</h3></button>
                 </Link>
+                
                 <Link>
-                    <h3>Sign Up</h3>
+                    <button><h3>Sign Up</h3></button>
                 </Link>
             </div>
         </div>

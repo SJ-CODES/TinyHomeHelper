@@ -73,3 +73,22 @@
     display: flex;
     flex-direction: row;
   }
+
+  .header__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .aboutUs{
+    background-color: white;
+    width: 1390px;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  /* .aboutDiv{ 
+    background-image: url("https://cdn.vox-cdn.com/thumbor/m3eeoiqE0poCaCIiNnzl7Q9Ch_0=/0x0:5760x3840/1200x800/filters:focal(2420x1460:3340x2380)/cdn.vox-cdn.com/uploads/chorus_image/image/62652488/shutterstock_1328908643.6.jpg") ;
+    
+  
+  } */

@@ -10,14 +10,11 @@ import Footer from './Components/Footer';
 import AboutUs from "./Components/AboutUs";
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay"
 import CommunityForum from './Components/CommunityForum';
-<<<<<<< HEAD
 import ForumHeader from './Components/ForumHeader';
 import './Components/CSS/PhotoGallery.css'
 
 
-=======
 import EducateHomepage from "./Components/EducateHomepage";
->>>>>>> master
 
 function App() {
   return (
