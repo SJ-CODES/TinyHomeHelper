@@ -1,6 +1,5 @@
 import firebase from 'firebase/app'
 import 'firebase/storage'
-// import { getStorage } from 'firebase/storage';
 require("dotenv").config();
 
 

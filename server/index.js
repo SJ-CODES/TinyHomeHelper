@@ -6,10 +6,8 @@ require("dotenv").config();
 
 const app = express();
 
-const postRoutes = require('./routes/route.posts');
-app.use(express.json())
-<<<<<<< HEAD
 
+app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 
@@ -19,15 +17,13 @@ const Photo = require("./schemas/photoGallery");
 const postRoutes = require('./routes/route.posts');
 
 app.use('/posts' , postRoutes);
-=======
 app.use(cors());
 app.use('/posts' , postRoutes);
 app.use(express.urlencoded({ extended: false }));
 
-// const upload = multer({dest: 'uploads/'});
-const Photo = require("./schemas/photoGallery");
 
->>>>>>> master
+const Photogallery = require("./schemas/photoGallery");
+
 
 // const photoGallery = require('./routes/photoGallery');
 // app.use('/photos', photoGallery)

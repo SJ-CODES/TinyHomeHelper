@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className="header">
       <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
-        <Navbar.Brand href="/">Tiny Homes</Navbar.Brand>
+        <Navbar.Brand href="/">TinyHomeHelper</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
@@ -19,18 +19,16 @@ function Header() {
               <NavDropdown.Item href="/communityforum">
                 Community Forum
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Option #2</NavDropdown.Item>
+              <NavDropdown.Item href="/photoGallery">Gallery</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Option #3
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Resources" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/TinyHomeChecklist">Tiny Home Checklist</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              Option #2
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Option #3</NavDropdown.Item>
+              <NavDropdown.Item href="/TinyHomeChecklist">The Checklist</NavDropdown.Item>
+              <NavDropdown.Item href="/educationalresources">Education</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.youtube.com/user/livingbigtinyhouse">Videos</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Option #4

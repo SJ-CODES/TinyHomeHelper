@@ -13,8 +13,8 @@
 // };
 
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
-import { userLoginReducer } from "./reducers/userReducers";
-import { postsReducer } from "./reducers/postsReducer";
+import { userLoginReducer } from "./store/userReducers";
+import { postsReducer } from "./store/postsReducer";
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
