@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
 
-
 //still need to add styling, but want to see how this looks in react first
 //where are these props coming from??
 

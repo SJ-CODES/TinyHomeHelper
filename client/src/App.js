@@ -1,21 +1,23 @@
-import './Components/CSS/App.css';
-import React from 'react';
-import TinyHomeChecklist from './Components/TinyHomeChecklist'
-import UploadForm from './Components/UploadForm';
-import "bootswatch/dist/minty/bootstrap.min.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from './Components/Home';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import AboutUs from "./Components/AboutUs";
+
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay"
 import CommunityForum from './Components/CommunityForum';
 import ForumHeader from './Components/ForumHeader';
 import './Components/CSS/PhotoGallery.css'
-
-
+import LoginScreen from "./Components/LoginScreen";
+import RegisterScreen from "./Components/RegisterScreen";
+import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
-
+import "bootswatch/dist/minty/bootstrap.min.css";
+import "./Components/CSS/index.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./Components/Home";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import AboutUs from "./Components/AboutUs";
+import "./Components/CSS/App.css";
+import React, { Component } from "react";
+import TinyHomeChecklist from "./Components/TinyHomeChecklist";
+import UploadForm from "./Components/UploadForm";    
 function App() {
   return (
     
@@ -28,6 +30,8 @@ function App() {
                   <Home/>
                   <Footer/>
                 </Route>
+    <Route exact path='/login' component={LoginScreen}></Route>
+					<Route exact path='/register' component={RegisterScreen}></Route>
                 <Route exact path="/about-us" component={AboutUs}>
                   <Header/>
                   <AboutUs/>
@@ -53,10 +57,8 @@ function App() {
                 </Route>
           </Switch>
       </BrowserRouter>
-      
-
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;

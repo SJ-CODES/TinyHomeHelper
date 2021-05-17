@@ -1,10 +1,12 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import "./CSS/Header.css";
 
-
 function Header() {
+
   return (
     <div className="header">
       <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
@@ -39,6 +41,7 @@ function Header() {
       </Navbar>
     </div>
   );
+
 }
 
 export default Header;
