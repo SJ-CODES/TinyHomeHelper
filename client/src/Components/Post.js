@@ -1,63 +1,75 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./CSS/Post.css";
-import { Avatar } from '@material-ui/core';
+import { Avatar, Button } from '@material-ui/core';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import axios from "axios";
+import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
+import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { getPost, likePost, deletePost } from '../actions/postActions';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-//here we need to map through our database that has all of ours posts
+function Post({ post, setCurrentId }) {
+  const dispatch = useDispatch();
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const history = useHistory();
 
-function Post({ userPic, image, username, timestamp, message }) {
+  const Likes = () => {
+    if (post?.likes?.length > 0) {
+      return post.likes.find((like) => like === (user?.result?.googleId || user?.result?._id))
+        ? (
+          <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}` }</>
+        ) : (
+          <><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
+        );
+    }
 
-  const [posts, getPosts] = useState("")
+    return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>;
+  };
 
-  //what is the url for our mongo db??
-  const url = "";
+  const openPost = (e) => {
+    dispatch(getPost(post._id, history));
+    // history.push(`/posts/${post._id}`);
+    console.log(post)
+  };
 
-  useEffect(() => {
-    getAllPosts();
-  }, []);
-
-  const getAllPosts = () => {
-    axios.get(`${url}posts`)
-    .then((response) => {
-      const allPosts = response.data.posts.allPosts;
-      //add our data to the state
-      getPosts(allPosts);
-    })
-    .catch(error => console.error(`Error: ${error}`));
-  }
-
-  return (
-    //where do I want to pass the props to?
-    // <Feed posts = {posts}/>
-    <div className="post">
+  // const postItem = allPosts.map((post) => {
+  //   console.log(postItem.user)
+    return (
+      <div className="post">
       <div className="post__top">
-        <Avatar src={userPic} className="post__avatar" />
+        {/* <Avatar src={} className="post__avatar" /> */}
         <div className="post__topInfo">
-          <h3>{username}</h3>
-          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+          <h2>{post?.title}</h2>
+          {/* <h3>{post.user}</h3> */}
+          {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
         </div>
       </div>
       <div className="post__bottom">
-        <p>{message}</p>
+        {/* <p>{post.message.split(' ').splice(0, 20).join(' ')}...</p> */}
+        <p>{post?.body}</p>
       </div>
-      <div className="post__image">
-        <img src={image} alt="" />
-      </div>
-
       <div className="post__options">
-        <div className="post__option">
-          <ThumbUpIcon />
-          <p>Like</p>
+          <div className="post__option">
+            <ThumbUpIcon disabled={!user?.result} onClick={() => dispatch(likePost(post._id))} />
+            <Likes />
+          </div>
+          <div className="post__option">
+            <ChatBubbleOutlineIcon />
+            {/* so far we don't have comments enabled */}
+            <p>Comment</p>
+          </div>
+          <div className="post__option">
+            {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
+            <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
+              <DeleteIcon fontSize="small" /> &nbsp; Delete
+            </Button>
+            )}
+          </div>
         </div>
-        <div className="post__option">
-          <ChatBubbleOutlineIcon />
-          <p>Comment</p>
-        </div>
-      </div>
     </div>
-  );
+    )
 }
 
 export default Post;

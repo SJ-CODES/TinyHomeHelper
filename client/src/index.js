@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import store from './store'
+
 import "bootswatch/dist/minty/bootstrap.min.css";
-import "./Components/CSS/index.css";
-import reportWebVitals from "./reportWebVitals";
-import App from "./App";
+
 import { createStore } from "redux";
 import postsReducer from "./reducers/postsReducer";
-import { Provider } from "react-redux";
+
+import './Components/CSS/index.css';
+import reportWebVitals from './reportWebVitals';
+import App from './App'
+
+import { Provider } from 'react-redux';
+import store from "./store"
 
 
 

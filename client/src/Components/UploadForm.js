@@ -1,39 +1,91 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { storage } from '../firebase/tinyHomeStorage'
+import PhotoGalleryDisplay from './PhotoGalleryDisplay';
 
 const UploadForm = () => {
 
 
-    const [file, setFile] = useState(null);
-
-    const types = ['image/png', 'image/jpeg'];
+    const [image, setImage] = useState(null);
+    const [username, setUsername] = useState(null);
+    const types = ['image/png', 'image/jpeg', 'image/gif', 'image/jpg'];
     const [error, setError] = useState(null);
-    const changeHandler = (e) =>{
-        let selected = e.target.files[0];
+
+    const handleChange = async (e) => {
+        if (e.target.files[0]) {
+            setImage(e.target.files[0]);
+        }
+    };
+    const handleNameChange =  (e) =>{
+        setUsername({
+            ...username,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const uploadHandler = (e) => {
+        e.preventDefault()
+        const selected = image;
 
         if (selected && types.includes(selected.type)) {
-            setFile(selected);
-            setError("");
 
-        }else{
-            setFile(null);
-            setError('Please select an image file of (png or jpeg)');
+            const uploadTask = storage.ref(`images/${image.name}`).put(image);
+            console.log(uploadTask)
+            uploadTask.on(
+                'state_changed',
+                (snapshot) => { },
+                (error) => {
+                },
+                () => {
+                    storage
+                        .ref('images')
+                        .child(image.name)
+                        .getDownloadURL()
 
-        }
-    }
-    const handleSubmitFile = () =>{
-        fetch()
-        
-    }
-    return (
-        <form>
-            <input type ="file" onChange={changeHandler}  />
-            <button onClick="handleSubmitFile">Submit</button>
-            <div className="output">
-                { error && <div className="error">{error} </div>}
-                {file && <div> {file.name}</div>}
+                        .then(async function (url) {
+                            console.log(url)
+
+                            fetch('http://localhost:8080/savePhoto', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    username: username,
+                                    imageFile: url
+                                })
+                            }).then(response => response.json())
+                                .then(result => {
+                                    console.log(result)
+                                })
+
+
+                        })
+                })
+        } else {
+            setImage(null);
+            setError('Please select an image file of (png, jpg, gif or jpeg)');
+
+        }}
+
+
+
+
+        return (
+            <div>
+                <form>
+                    <input type="file" name="file" accept="image/*" multiple={false} onChange={handleChange} />
+                    <input type="text" name="username" onChange={handleNameChange} placeholder="Enter Username" />
+                   <button onClick={uploadHandler}>Upload</button> 
+                </form>
+                    <div className="output">
+                        {error && <div className="error">{error} </div>}
+                        {image && <div> {image.name}</div>}
+                    </div>
+                
+               
             </div>
-        </form>
-    )
-}
+        )
+    }
 
-export default UploadForm
+    export default UploadForm

@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./CSS/Feed.css";
-import CreatePost from "./CreatePost"
-import Post from "./Post"
+import CreatePost from "./CreatePost";
+import Post from "./Post";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../actions/postActions"
 
 function Feed() {
-    return (
-        <div className="feed">
-            <CreatePost/>
-            <Post/>
-            <Post/>
-            <Post/>
-        </div>
-    )
+//   const [currentId, setCurrentId] = useState(0);
+  const dispatch = useDispatch();
+
+  const allPosts = useSelector(state => state.posts)
+  console.log(allPosts)
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
+  return (
+    //map through posts
+    <div className="feed">
+      <CreatePost />
+      {allPosts.map(post => <Post key={post?._id} post={post}/>)}
+    </div>
+  );
 }
 
-export default Feed
+export default Feed;
