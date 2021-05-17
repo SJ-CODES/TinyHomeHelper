@@ -3,8 +3,9 @@ import 'firebase/storage'
 require("dotenv").config();
 
 
-firebase.initializeApp(process.env.FIREBASE_CONFIG);
+const firebaseApp = firebase.initializeApp(process.env.FIREBASE_CONFIG);
 
-const storage = firebase.storage();
+const storage= firebase.storage(firebaseApp);
+
 
 export { storage, firebase as default };

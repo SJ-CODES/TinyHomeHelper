@@ -6,14 +6,23 @@ require("dotenv").config();
 
 const app = express();
 
-const postRoutes = require('./routes/route.posts');
+
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+
+
+
+
+const Photo = require("./schemas/photoGallery");
+const postRoutes = require('./routes/route.posts');
+
+app.use('/posts' , postRoutes);
 app.use(cors());
 app.use('/posts' , postRoutes);
 app.use(express.urlencoded({ extended: false }));
 
-// const upload = multer({dest: 'uploads/'});
-const Photo = require("./schemas/photoGallery");
+
+const Photogallery = require("./schemas/photoGallery");
 
 
 // const photoGallery = require('./routes/photoGallery');
@@ -49,7 +58,7 @@ app.post('/savePhoto', (req, res) => {
 	
 	let photoGallery = new Photo({
 		image : imageFile,
-		username: username,
+		username: username.username,
 	})
 	
 	photoGallery.save((error) =>{
@@ -61,7 +70,15 @@ app.post('/savePhoto', (req, res) => {
 	})
 
 })
-
+app.get('/displayPhotos', (req, res)=>{
+	Photo.find({}, (error, photo) =>{
+		if(error) {
+			res.json({error: 'Unable to fetch photos'})
+		}else{
+			res.json(photo)
+		}
+	})
+})
 
 
 app.listen(8080,() =>{
