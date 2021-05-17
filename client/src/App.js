@@ -9,6 +9,8 @@ import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import AboutUs from "./Components/AboutUs";
+import LoginScreen from "./Components/LoginScreen";
+import RegisterScreen from "./Components/RegisterScreen";
 // import TinyHomeChecklist from "./Components/TinyHomeChecklist"
 import PhotoGallery from "./Components/PhotoGallery";
 // import UploadForm from './Components/UploadForm';
@@ -24,6 +26,8 @@ function App() {
 						<Home />
 						<Footer />
 					</Route>
+					<Route exact path='/login' component={LoginScreen}></Route>
+					<Route exact path='/register' component={RegisterScreen}></Route>
 					<Route exact path='/about-us' component={AboutUs}>
 						<Header />
 						<AboutUs />
@@ -36,8 +40,10 @@ function App() {
 						<Header />
 						<UploadForm />
 					</Route>
+
 					<Route exact path='/community-forum'>
 						<CommunityForum />
+
 						<Footer />
 					</Route>
 				</Switch>
