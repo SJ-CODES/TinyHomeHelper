@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 const Photo = require("./schemas/photoGallery");
 const postRoutes = require('./routes/route.posts');
 
-app.use('/posts' , postRoutes);
+
 app.use(cors());
 app.use('/posts' , postRoutes);
 app.use(express.urlencoded({ extended: false }));

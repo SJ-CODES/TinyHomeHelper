@@ -3,7 +3,7 @@ import { userLoginReducer, userRegisterReducer } from "./store/userReducers";
 import { postsReducer } from "./store/postsReducer";
 import thunk from "redux-thunk";
 
-export const reducer = combineReducers({
+const reducer = combineReducers({
 	userLogin: userLoginReducer,
 	userRegister: userRegisterReducer,
 	postsReducer: postsReducer,
