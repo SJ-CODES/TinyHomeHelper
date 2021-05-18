@@ -1,5 +1,103 @@
-.galleryFlexBox{
-    display: flex;
-    flex-direction: column;
+
+html{
+    
+    
+}
+body{
+    background-color:light ;
+    
+}
+
+
+    
+
+
+
+.usernameStyle{
+    font-family: 'Courier New', Courier, monospace;
 
 }
+.galleryInput{
+    justify-content: center;
+}
+
+.titleUpload{
+    font-size: 50px;
+    background-color:lightskyblue;
+    width: 100%;
+    border-radius: 112px;
+    padding: 50px;
+    margin-top: 10px
+  
+}
+
+img{
+    border-radius: 52px;
+}
+
+
+/* upload form styles */
+ form{
+    margin: 30px auto 10px;
+    text-align: center;
+  }
+ 
+  .output{
+    height: 60px;
+    font-size: 0.8rem;
+  }
+
+  .uploadBtn{
+      background-color:lightpink;
+      border-radius: 90px;
+  } 
+
+
+  
+  /* Create four equal columns that sits next to each other */
+.column {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    max-height: 15%;
+    padding: 4px;
+    float: left; 
+    
+  }
+  
+
+  
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns  */
+ @media screen and (max-width: 400px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other  */
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+   
+    .titleUpload{
+        font-size: 20px;
+        padding:7px;
+        margin-top: 10px;
+        background-color: lightpink;
+
+    }
+    input{
+        width:210px
+
+    }
+    img{
+        padding-left:15px
+    }
+  } 
+
+
+  

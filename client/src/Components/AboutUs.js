@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Components/CSS/AboutUs.css'
 
 function AboutUs() {
     return (

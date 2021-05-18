@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "bootswatch/dist/minty/bootstrap.min.css";
+
 import "./Components/CSS/Index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
@@ -11,6 +12,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { userLoginReducer, userRegisterReducer } from "./store/userReducers";
 import { postsReducer } from "./store/postsReducer";
+
 
 const reducer = combineReducers({
 	userLogin: userLoginReducer,
