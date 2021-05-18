@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(cors());
 app.use("/posts", postRoutes);
-app.use("/registration", userRoutes);
+app.use('/user', userRoutes);
 app.use(express.urlencoded({ extended: false }));
 
 const Photo = require("./schemas/photoGallery");

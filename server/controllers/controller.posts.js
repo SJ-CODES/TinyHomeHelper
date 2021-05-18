@@ -19,13 +19,8 @@ exports.getPosts = async (req, res) => {
 
 exports.createPost = async (req, res) => {
 	console.log(req.body);
-	// const post = req.body
+
 	const { title, body, tags } = req.body;
-	// const title = req.body.title
-	// const body = req.body.body
-	// const user = req.body.user
-	// const tags = req.body.tags
-	// const comments = req.body.comments
 
 	const newPost = new PostMessage({
 		title,
