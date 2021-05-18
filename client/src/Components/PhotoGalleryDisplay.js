@@ -8,7 +8,7 @@ function PhotoGalleryDisplay ({setIsUpLoaded, isUploaded}) {
     
         useEffect(() => {
             getphotoGalleryShow()
-        }, [isUploaded])
+        }, [])
         const getphotoGalleryShow = () => {
             fetch('http://localhost:8080/displayPhotos')
                 .then(response => response.json())
@@ -23,17 +23,12 @@ function PhotoGalleryDisplay ({setIsUpLoaded, isUploaded}) {
     
     const photoItems = photoGalleryShow.map((photos) => {
         return (
-            <div >
-                <div >
-                    <div  key = {photos._id}>
-                        <div class= "column"> 
-                            <img src={photos.image}/>
+                
+                    <div  class= "column"  key = {photos._id}>   
+                            < img class="imgPhotoGallery" src={photos.image}/>
                             <label><h2 class="usernameStyle">{photos.username}</h2></label>
-                        </div>
                     </div>
-                </div>
-               
-            </div>
+
                 
             
         )})
