@@ -31,7 +31,7 @@ function App() {
                 </Route>
     <Route exact path='/login' component={LoginScreen}></Route>
 					<Route exact path='/register' component={RegisterScreen}></Route>
-                <Route exact path="/about-us" component={AboutUs}>
+                <Route exact path="/aboutus" component={AboutUs}>
                   <Header/>
                   <AboutUs/>
                   <Footer/>

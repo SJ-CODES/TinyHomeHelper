@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./CSS/Home.css"
@@ -12,6 +11,7 @@ function Home() {
                     tabindex="0"
                     class="carousel__slide">
                 <div class="carousel__snapper">
+                    <a href="/educationalresources" class="button">Build Your Tiny Dream Home</a>
                     <a href="#carousel__slide4"
                     class="carousel__prev">Go to last slide</a>
                     <a href="#carousel__slide2"
@@ -21,7 +21,9 @@ function Home() {
                 <li id="carousel__slide2"
                     tabindex="0"
                     class="carousel__slide">
-                <div class="carousel__snapper"></div>
+                <div class="carousel__snapper">
+                    <a href="/communityforum" class="button">Find Your Community</a>
+                </div>
                 <a href="#carousel__slide1"
                     class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide3"
@@ -30,7 +32,7 @@ function Home() {
                 <li id="carousel__slide3"
                     tabindex="0"
                     class="carousel__slide">
-                <div class="carousel__snapper"></div>
+                <div class="carousel__snapper"><a href="/photogallery" class="button">Get Inspired</a></div>
                 <a href="#carousel__slide2"
                     class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide4"
@@ -39,7 +41,7 @@ function Home() {
                 <li id="carousel__slide4"
                     tabindex="0"
                     class="carousel__slide">
-                <div class="carousel__snapper"></div>
+                <div class="carousel__snapper"><a href="/aboutus" class="button">Our Mission</a></div>
                 <a href="#carousel__slide3"
                     class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide1"
