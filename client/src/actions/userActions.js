@@ -1,90 +1,90 @@
 //here we want a login request to get the JWT
-import axios from "axios";
-import {
-	USER_LOGIN_FAIL,
-	USER_LOGIN_REQUEST,
-	USER_LOGIN_SUCCESS,
-	USER_LOGOUT,
-	USER_REGISTER_FAIL,
-	USER_REGISTER_REQUEST,
-	USER_REGISTER_SUCCESS,
-} from "../constants/userConstants";
+// import axios from "axios";
+// import {
+// 	USER_LOGIN_FAIL,
+// 	USER_LOGIN_REQUEST,
+// 	USER_LOGIN_SUCCESS,
+// 	USER_LOGOUT,
+// 	USER_REGISTER_FAIL,
+// 	USER_REGISTER_REQUEST,
+// 	USER_REGISTER_SUCCESS,
+// } from "../constants/userConstants";
 
-export const login = (email, password) => async (dispatch) => {
-	try {
-		dispatch({
-			type: USER_LOGIN_REQUEST,
-		});
-		const config = {
-			headers: {
-				"Content-Type": "application/json",
-			},
-		};
-		const { data } = await axios.post(
-			"/users/login",
-			{ email, password },
-			config
-		);
-		dispatch({
-			type: USER_LOGIN_SUCCESS,
-			payload: data,
-		});
-		localStorage.setItem("userInfo", JSON.stringify(data)); //to get back ID, email, password, and token
-	} catch (error) {
-		dispatch({
-			type: USER_LOGIN_FAIL,
-			payload:
-				error.response && error.response.data.message
-					? error.response.data.message
-					: error.message,
-		});
-	}
-};
+// export const login = (email, password) => async (dispatch) => {
+// 	try {
+// 		dispatch({
+// 			type: USER_LOGIN_REQUEST,
+// 		});
+// 		const config = {
+// 			headers: {
+// 				"Content-Type": "application/json",
+// 			},
+// 		};
+// 		const { data } = await axios.post(
+// 			"/users/login",
+// 			{ email, password },
+// 			config
+// 		);
+// 		dispatch({
+// 			type: USER_LOGIN_SUCCESS,
+// 			payload: data,
+// 		});
+// 		localStorage.setItem("userInfo", JSON.stringify(data)); //to get back ID, email, password, and token
+// 	} catch (error) {
+// 		dispatch({
+// 			type: USER_LOGIN_FAIL,
+// 			payload:
+// 				error.response && error.response.data.message
+// 					? error.response.data.message
+// 					: error.message,
+// 		});
+// 	}
+// };
 
-export const logout = () => (dispatch) => {
-	localStorage.removeItem("userInfo");
+// export const logout = () => (dispatch) => {
+// 	localStorage.removeItem("userInfo");
 
-	dispatch({ type: USER_LOGOUT });
+// 	dispatch({ type: USER_LOGOUT });
 
-	document.location.href = "/login";
-};
+// 	document.location.href = "/login";
+// };
 
-export const register = (name, email, password) => async (dispatch) => {
-	try {
-		dispatch({
-			type: USER_REGISTER_REQUEST,
-		});
+// export const register = (name, email, password) => async (dispatch) => {
+// 	try {
+// 		dispatch({
+// 			type: USER_REGISTER_REQUEST,
+// 		});
 
-		const config = {
-			headers: {
-				"Content-Type": "application/json",
-			},
-		};
+// 		const config = {
+// 			headers: {
+// 				"Content-Type": "application/json",
+// 			},
+// 		};
 
-		const { data } = await axios.post(
-			"/users",
-			{ name, email, password },
-			config
-		);
+// 		const { data } = await axios.post(
+// 			"/users",
+// 			{ name, email, password },
+// 			config
+// 		);
 
-		dispatch({
-			type: USER_REGISTER_SUCCESS,
-			payload: data,
-		});
+// 		dispatch({
+// 			type: USER_REGISTER_SUCCESS,
+// 			payload: data,
+// 		});
 
-		dispatch({
-			type: USER_LOGIN_SUCCESS,
-			payload: data,
-		});
+// 		dispatch({
+// 			type: USER_LOGIN_SUCCESS,
+// 			payload: data,
+// 		});
 
-		localStorage.setItem("userInfo", JSON.stringify(data));
-	} catch (error) {
-		dispatch({
-			type: USER_REGISTER_FAIL,
-			payload:
-				error.response && error.response.data.message
-					? error.response.data.message
-					: error.message,
-		});
-	}
-};
+// 		localStorage.setItem("userInfo", JSON.stringify(data));
+// 	} catch (error) {
+// 		dispatch({
+// 			type: USER_REGISTER_FAIL,
+// 			payload:
+// 				error.response && error.response.data.message
+// 					? error.response.data.message
+// 					: error.message,
+// 		});
+// 	}
+// };
