@@ -1,5 +1,4 @@
 import React from "react";
-import ForumPost from "./ForumPost";
 import ForumHeader from "./ForumHeader";
 import ForumSidebar from "./ForumSidebar";
 import Feed from "./Feed";

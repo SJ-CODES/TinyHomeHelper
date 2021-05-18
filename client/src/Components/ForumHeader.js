@@ -16,7 +16,7 @@ function ForumHeader() {
         <div className="header__input">
             <SearchIcon />
             <input type="text" placeholder="Search"></input>
-      </div>
+        </div>
 
       <div className="header__center">
         <div className="header__option">
