@@ -7,7 +7,7 @@ import RegisterScreen from "./Components/RegisterScreen";
 import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
 import "bootswatch/dist/minty/bootstrap.min.css";
-import "./Components/CSS/Index.css";
+import "./Components/CSS/index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
@@ -16,8 +16,11 @@ import AboutUs from "./Components/AboutUs";
 import "./Components/CSS/App.css";
 import React, { Component } from "react";
 import TinyHomeChecklist from "./Components/TinyHomeChecklist";
-import UploadForm from "./Components/UploadForm";    
+import UploadForm from "./Components/UploadForm"; 
+import { useState } from "react"
 function App() {
+  
+
   return (
     
     <div className="App">
@@ -42,8 +45,8 @@ function App() {
                 </Route>
                 <Route exact path ="/PhotoGallery" component= {PhotoGalleryDisplay}>
                   <Header/>
-                  <UploadForm />
-                  <PhotoGalleryDisplay />
+                  <UploadForm  />
+                  <PhotoGalleryDisplay/>
                 </Route>
                 <Route exact path="/communityforum" component={CommunityForum}>
                   <CommunityForum/>
