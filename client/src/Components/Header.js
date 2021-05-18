@@ -10,7 +10,9 @@ function Header() {
   return (
     <div className="header">
       <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
-        <Navbar.Brand href="/">TinyHomeHelper</Navbar.Brand>
+        
+        <Navbar.Brand href="/"><p className="headerTitle">TinyHomeHelper</p></Navbar.Brand>
+        
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
@@ -24,7 +26,7 @@ function Header() {
               <NavDropdown.Item href="/photoGallery">Gallery</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Option #3
+                {/* Option #3 */}
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Resources" id="collasible-nav-dropdown">
@@ -33,7 +35,7 @@ function Header() {
               <NavDropdown.Item href="https://www.youtube.com/user/livingbigtinyhouse">Videos</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Option #4
+                {/* Option #4 */}
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
