@@ -7,7 +7,9 @@ require("dotenv").config();
 const app = express();
 
 const postRoutes = require('./routes/route.posts');
+
 app.use(express.json())
+
 app.use(cors());
 app.use('/posts' , postRoutes);
 app.use(express.urlencoded({ extended: false }));
