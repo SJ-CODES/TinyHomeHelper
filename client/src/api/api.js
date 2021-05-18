@@ -29,4 +29,4 @@ export const updatePost = (id, updatedPost) =>
 export const deletePost = (id) => API.delete(`/posts/${id}`);
 
 export const login = (formData) => API.post("/user/login", formData);
-export const register = (formData) => API.post("/user/register", formData);
+export const register = (formData) => API.post("/user/registration", formData);
