@@ -16,7 +16,7 @@ import "./Components/CSS/App.css";
 import React, { Component } from "react";
 import TinyHomeChecklist from "./Components/TinyHomeChecklist";
 import UploadForm from "./Components/UploadForm";
-import Register from "./Components/Auth/Register";
+// import Register from "./Components/Auth/Register";
 import RegisterTo from "./Components/RegisterTo";
 function App() {
 	return (
@@ -31,10 +31,9 @@ function App() {
 					<Route exact path='/login' component={RegisterTo}>
 						<Header />
 						<RegisterTo />
-						{/* <RegisterTo /> */}
 						<Footer />
 					</Route>
-					<Route exact path='/register' component={Register} />
+					{/* <Route exact path='/register' component={Register} /> */}
 					<Route exact path='/about-us' component={AboutUs}>
 						<Header />
 						<AboutUs />

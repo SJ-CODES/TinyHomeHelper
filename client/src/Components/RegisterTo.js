@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { AUTH } from "../constants/userConstants";
+// import { AUTH } from "../constants/userConstants";
 import { login, register } from "../actions/auth";
 import {
 	Avatar,
@@ -12,11 +12,11 @@ import {
 } from "@material-ui/core";
 import useStyles from "../Components/Auth/AuthStyles";
 import { useHistory } from "react-router-dom";
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Icon from "../Components/Auth/icon";
+// import Icon from "../Components/Auth/icon";
 import Input from "../Components/Auth/Input";
-import Feed from "../Components/Feed";
+// import Feed from "../Components/Feed";
 
 const initialState = {
 	firstName: "",
@@ -51,35 +51,35 @@ function RegisterTo() {
 			dispatch(login(form, history));
 		}
 	};
-	const googleSuccess = async (res) => {
-		const result = res?.profileObj;
-		const token = res?.tokenId;
+	// const googleSuccess = async (res) => {
+	// 	const result = res?.profileObj;
+	// 	const token = res?.tokenId;
 
-		try {
-			dispatch({ type: AUTH, data: { result, token } });
+	// 	try {
+	// 		dispatch({ type: AUTH, data: { result, token } });
 
-			history.push("/");
-		} catch (error) {
-			console.log(error);
-		}
-	};
+	// 		history.push("/");
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 	}
+	// };
 
-	const googleError = () =>
-		alert("Google Sign In was unsuccessful. Try again later");
+	// const googleError = () =>
+	// 	alert("Google Sign In was unsuccessful. Try again later");
 
 	const handleChange = (e) =>
 		setForm({ ...form, [e.target.name]: e.target.value });
 
 	return (
 		<div className='register'>
-			<Feed />
+			{/* <Feed /> */}
 			<Container component='main' maxWidth='xs'>
 				<Paper className={classes.paper} elevation={3}>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />
 					</Avatar>
 					<Typography component='h1' variant='h5'>
-						{isRegister ? "Sign up" : "Sign in"}
+						{isRegister ? "Register" : "Login"}
 					</Typography>
 					<form className={classes.form} onSubmit={handleSubmit}>
 						<Grid container spacing={2}>
@@ -131,7 +131,7 @@ function RegisterTo() {
 						>
 							{isRegister ? "Register" : "Login"}
 						</Button>
-						<GoogleLogin
+						{/* <GoogleLogin
 							clientId='564033717568-e5p23rhvcs4i6kffgsbci1d64r8hp6fn.apps.googleusercontent.com'
 							render={(renderProps) => (
 								<Button
@@ -149,7 +149,7 @@ function RegisterTo() {
 							onSuccess={googleSuccess}
 							onFailure={googleError}
 							cookiePolicy='single_host_origin'
-						/>
+						/> */}
 						<Grid container justify='flex-end'>
 							<Grid item>
 								<Button onClick={switchMode}>
