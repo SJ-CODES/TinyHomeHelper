@@ -6,7 +6,7 @@ import RegisterScreen from "./Components/RegisterScreen";
 import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
 import "bootswatch/dist/minty/bootstrap.min.css";
-import "./Components/CSS/index.css";
+import "./Components/CSS/Index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
