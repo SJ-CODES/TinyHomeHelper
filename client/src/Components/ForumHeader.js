@@ -29,10 +29,6 @@ function ForumHeader() {
 
         </div>
         <div className="header__right">
-            {/* <div className="header__info">
-                <Avatar fontSize="large"/>
-                <h4>Username</h4>
-            </div> */}
             <div className="header__links">
                 <Link>
                     <button ><h3>Login</h3></button>
