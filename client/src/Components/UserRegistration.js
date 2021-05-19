@@ -15,6 +15,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 // import Icon from "../Components/Auth/icon";
 import Input from "./Auth/Input";
 // import Feed from "../Components/Feed";
+import "./CSS/UserRegistration.css"
 
 
 const initialState = {
@@ -81,9 +82,8 @@ function RegisterTo() {
 		setForm({ ...form, [e.target.name]: e.target.value });
 
 	return (
-		<div className='register'>
-			{/* <Feed /> */}
-			<Container component='main' maxWidth='xs'>
+		<div className='userRegistration'>
+			<Container component='main' maxWidth='xs' >
 				<Paper elevation={3}>
 					<Avatar >
 						<LockOutlinedIcon />
