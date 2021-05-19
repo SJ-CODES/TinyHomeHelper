@@ -26,7 +26,7 @@ function App() {
 					<Route exact path='/' component={App}>
 						<Header />
 						<Home />
-						<Footer />
+						
 					</Route>
 					<Route exact path='/login' component={LoginScreen}></Route>
 					<Route exact path='/register' component={RegisterScreen}></Route>
@@ -48,11 +48,12 @@ function App() {
 						<Header/>
 						<CommunityForum />
 						<Footer />
+						
 					</Route>
 					<Route exact path='/educationalresources'>
 						<Header />
 						<EducateHomepage />
-						<Footer />
+						
 					</Route>
 				</Switch>
 			</BrowserRouter>

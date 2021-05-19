@@ -1,12 +1,15 @@
 import React from 'react'
 import LibraryAddCheckIcon from '@material-ui/icons/LibraryAddCheck';
 import BuildIcon from '@material-ui/icons/Build';
+<
 import './CSS/TinyHomeChecklist.css'
+
 
 
 function TinyHomeChecklist() {
     return (
         <div>
+
             <h1 className="checkListHeader">What would you need to build a Base Tiny Home?? </h1>
             <h2 className="checklistTitle">Fundamental Planning and Sourcing of Resources: </h2>
             <ul>     
@@ -34,18 +37,17 @@ function TinyHomeChecklist() {
                 </div>
                 <div className="containerCheckList">
                     <LibraryAddCheckIcon />&nbsp;&nbsp;
+
                     <li><h3>Draft or purchase building plans</h3></li>
                 </div>
                 
                      
                     
-                   
-                    
-                   
-                    
+
             </ul>
             <h2 className="checklistTitle">Fundamental Construction involved:</h2>
             <ul>
+
                     <div className="containerCheckList">
                         <BuildIcon />&nbsp;&nbsp;
                         <li><h3>TINY HOUSE TRAILER</h3></li>
@@ -158,12 +160,7 @@ function TinyHomeChecklist() {
                    
                     
                     
-                 
-                    
-                    
-                
-                
-                  
+         
             </ul>
             <h2>
                 <a href="https://thetinylife.com/ryans-tiny-house/tiny-house-building-checklist/"><button>Click for Details</button></a>
