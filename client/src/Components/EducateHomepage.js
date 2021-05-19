@@ -95,8 +95,8 @@ function EducateHomepage() {
                         <img src="https://www.wellfedhomestead.com/wp-content/uploads/2016/02/prosandconsoftinyhouses.jpg"/>
                     </div>
                     <div class="card_content">
-                        <h2 class="card_title"><a href="https://goloadup.com/pros-cons-tiny-house-living/">Pros vs Cons of Tiny Lving</a></h2>
-                        <p class="card_text">Are Their Any Disadvantages of Owning Tiny Homes</p>
+                        <h2 class="card_title"><a href="https://goloadup.com/pros-cons-tiny-house-living/">Pros vs Cons of Tiny Living</a></h2>
+                        <p class="card_text">Are There Any Disadvantages of Owning Tiny Homes?</p>
                     </div>
                 </div>
                 </li>
