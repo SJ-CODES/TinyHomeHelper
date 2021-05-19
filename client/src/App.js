@@ -33,7 +33,11 @@ function App() {
 						<RegisterTo />
 						<Footer />
 					</Route>
-					{/* <Route exact path='/register' component={Register} /> */}
+					<Route exact path='/registration' component={RegisterTo}>
+						<Header />
+						<RegisterTo />
+						<Footer />
+					</Route>
 					<Route exact path='/about-us' component={AboutUs}>
 						<Header />
 						<AboutUs />

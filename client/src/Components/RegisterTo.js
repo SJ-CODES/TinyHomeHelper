@@ -19,11 +19,9 @@ import Input from "../Components/Auth/Input";
 // import Feed from "../Components/Feed";
 
 const initialState = {
-	firstName: "",
-	lastName: "",
+	lastname: "",
 	email: "",
 	password: "",
-	confirmPassword: "",
 };
 
 function RegisterTo() {
@@ -85,16 +83,16 @@ function RegisterTo() {
 						<Grid container spacing={2}>
 							{isRegister && (
 								<>
-									<Input
+									{/* <Input
 										name='firstName'
 										label='First Name'
 										handleChange={handleChange}
 										autoFocus
 										half
-									/>
+									/> */}
 									<Input
-										name='lastName'
-										label='Last Name'
+										name='username'
+										label='Username'
 										handleChange={handleChange}
 										half
 									/>
@@ -113,14 +111,7 @@ function RegisterTo() {
 								type={showPassword ? "text" : "password"}
 								handleShowPassword={handleShowPassword}
 							/>
-							{isRegister && (
-								<Input
-									name='confirmPassword'
-									label='Repeat Password'
-									handleChange={handleChange}
-									type='password'
-								/>
-							)}
+							
 						</Grid>
 						<Button
 							type='submit'
