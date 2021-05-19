@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Components/CSS/AboutUs.css'
-import Footer from '../Components/Footer'
 
 function AboutUs() {
     return (

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { createPost, updatePost, getPosts } from "../actions/postActions";
+import { createPost, getPosts } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
 import "./CSS/CreatePost.css";
 
-function CreatePost({ currentId, setCurrentId }) {
+function CreatePost({ currentId }) {
 
-  //setting the state for our posts to hold our data - this is the schema for mongo
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
@@ -16,15 +15,12 @@ function CreatePost({ currentId, setCurrentId }) {
     selectedFile: "",
   });
 
-  //useSelector allows you to extract data from the Redux store state so here we're grabbing our data from the state
   const post = useSelector((state) =>
     currentId
       ? state.posts.posts.find((message) => message._id === currentId)
       : null
   );
   const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem("profile"));
-  const history = useHistory();
 
   const clear = () => {
     setPostData({ title: "", body: "", tags: "", selectedFile: "" });

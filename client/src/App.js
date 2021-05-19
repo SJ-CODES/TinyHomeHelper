@@ -1,20 +1,17 @@
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay";
 import "./Components/CSS/PhotoGallery.css";
-// import LoginScreen from "./Components/LoginScreen";
-// import RegisterScreen from "./Components/RegisterScreen";
 import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
-import "bootswatch/dist/minty/bootstrap.min.css";
+import "bootswatch/dist/morph/bootstrap.min.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import AboutUs from "./Components/AboutUs";
-import "./Components/CSS/App.css";
 import React from "react";
 import TinyHomeChecklist from "./Components/TinyHomeChecklist";
 import UploadForm from "./Components/UploadForm";
-import RegisterTo from "./Components/RegisterTo";
+import UserRegistration from "./Components/UserRegistration";
 
 function App() {
 	return (
@@ -24,17 +21,12 @@ function App() {
 					<Route exact path='/' component={Home}>
 						<Header />
 						<Home />
-						
 					</Route>
-					<Route exact path='/login' component={RegisterTo}>
-						
-						<RegisterTo />
-						
+					<Route exact path='/login' component={UserRegistration}>
+						<UserRegistration />
 					</Route>
-					<Route exact path='/registration' component={RegisterTo}>
-						
-						<RegisterTo />
-						
+					<Route exact path='/registration' component={UserRegistration}>
+						<UserRegistration />
 					</Route>
 					<Route exact path='/about-us' component={AboutUs}>
 						<Header />
@@ -54,12 +46,10 @@ function App() {
 						<Header/>
 						<CommunityForum />
 						<Footer />
-						
 					</Route>
 					<Route exact path='/educationalresources'>
 						<Header />
 						<EducateHomepage />
-						
 					</Route>
 				</Switch>
 			</BrowserRouter>

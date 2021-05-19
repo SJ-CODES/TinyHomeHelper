@@ -42,11 +42,3 @@
   .createPost__input {
     flex: 1;
   }
-
-  @media (min-width: 1281px) {
-  /* this hides the button so the user has to hit the enter button */
-  /* .createPost__top > form > button {
-    display: none;
-  } */
-    
-  } 
