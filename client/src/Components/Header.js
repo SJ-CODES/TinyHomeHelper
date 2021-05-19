@@ -6,6 +6,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import decode from 'jwt-decode';
 import * as actionType from '../constants/userConstants';
 import HomeIcon from "@material-ui/icons/Home"
+import "./CSS/Header.css"
 
 const Header = () => {
   

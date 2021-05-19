@@ -112,6 +112,10 @@ ol, li {
   margin-top: 20px;
   margin-bottom: 20px;
   justify-content: space-around;
+  background-color: pink;
+  border-radius: 12px;
+  box-shadow: 15px 10px 15px;
+  font-weight: bold;
 }
 
 .button {
