@@ -10,13 +10,12 @@ import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 //import store from "./store";
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-import { userLoginReducer, userRegisterReducer } from "./store/userReducers";
+import { authReducer } from "./store/userReducers";
 import { postsReducer } from "./store/postsReducer";
 
 
 const reducer = combineReducers({
-	userLogin: userLoginReducer,
-	userRegister: userRegisterReducer,
+	authReducer: authReducer,
 	postsReducer: postsReducer,
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
