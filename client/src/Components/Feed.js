@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./CSS/Feed.css";
 import CreatePost from "./CreatePost";
 import Post from "./Post";
@@ -17,7 +17,6 @@ function Feed() {
 	}, []);
 
 	return (
-		//map through posts
 		<div className='feed'>
 			<CreatePost />
 			{allPosts.map((post) => (

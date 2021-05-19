@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-/* html {
-  background-color: #ecf9ff;
-} */
-
 body {
   color: #272727;
   font-family: 'Quicksand', serif;
@@ -43,20 +39,6 @@ img {
   vertical-align: middle;
 }
 
-/* .btn {
-  color: black;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-} */
-
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.12);
 }
@@ -82,7 +64,6 @@ img {
 
 @media (min-width: 56rem) {
   .cards_item {
-    /* width: 33.3333%; */
     width: 45%;
   }
 }

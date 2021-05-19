@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { storage } from '../firebase/tinyHomeStorage'
-import PhotoGalleryDisplay from './PhotoGalleryDisplay';
 import '../Components/CSS/PhotoGallery.css'
 
 const UploadForm = () => {

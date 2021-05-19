@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { AUTH } from "../constants/userConstants";
 import { guestRegister, login, register } from "../actions/auth";
 import {
 	Avatar,
@@ -10,11 +9,11 @@ import {
 	Typography,
 	Container,
 } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 // import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 // import Icon from "../Components/Auth/icon";
-import Input from "../Components/Auth/Input";
+import Input from "./Auth/Input";
 // import Feed from "../Components/Feed";
 
 

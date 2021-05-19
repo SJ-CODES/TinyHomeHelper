@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
+import { useDispatch } from "react-redux";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-// import Button from 'react-bootstrap/Button'
-
 import decode from 'jwt-decode';
 import * as actionType from '../constants/userConstants';
-// import useStyles from '../Components/Auth/AuthStyles';
-import "./CSS/Header.css";
 import HomeIcon from "@material-ui/icons/Home"
 
 const Header = () => {
@@ -47,8 +42,7 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/aboutus">About Us</Nav.Link>
-          {/* <Nav.Link href="/login">Login/Register</Nav.Link> */}
+          <Nav.Link href="/about-us">About Us</Nav.Link>
           <NavDropdown title="Community" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/communityforum">
               Community Forum

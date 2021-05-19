@@ -6,13 +6,12 @@ import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { getPost, likePost, deletePost } from '../actions/postActions';
+import { likePost, deletePost } from '../actions/postActions';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 function Post({ post }) {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem('profile'));
-  const history = useHistory();
 
   const Likes = () => {
     if (post?.likes?.length > 0) {
