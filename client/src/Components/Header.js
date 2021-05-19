@@ -5,7 +5,7 @@ import HomeIcon from "@material-ui/icons/Home"
 
 function Header() {
   return (
-    <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Navbar.Brand href="/">
         <p className="headerTitle"><HomeIcon/>TinyHomeHelper</p>
       </Navbar.Brand>
