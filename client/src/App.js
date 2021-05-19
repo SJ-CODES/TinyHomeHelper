@@ -6,7 +6,7 @@ import RegisterScreen from "./Components/RegisterScreen";
 import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
 import "bootswatch/dist/minty/bootstrap.min.css";
-import "./Components/CSS/Index.css";
+// import "./Components/CSS/Index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
@@ -26,7 +26,7 @@ function App() {
 					<Route exact path='/' component={App}>
 						<Header />
 						<Home />
-						<Footer />
+						
 					</Route>
 					<Route exact path='/login' component={LoginScreen}></Route>
 					<Route exact path='/register' component={RegisterScreen}></Route>
@@ -47,11 +47,12 @@ function App() {
 					<Route exact path='/communityforum' component={CommunityForum}>
 						<CommunityForum />
 						<Footer />
+						
 					</Route>
 					<Route exact path='/educationalresources'>
 						<Header />
 						<EducateHomepage />
-						<Footer />
+						
 					</Route>
 				</Switch>
 			</BrowserRouter>

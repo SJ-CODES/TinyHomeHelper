@@ -12,12 +12,12 @@ function EducateHomepage() {
                 <li class="cards_item">
                     <div class="card">
                         <div class="card_image">
-                            <img src="https://lh3.googleusercontent.com/proxy/nFMDwfwTSmOcaB0FD2phUwKHcg4OJo7Jy5aOHorlxKfTJjLR6Xjs0RP_Y6Gn_e4DP5j2K0-pl-bxZp4gVLUAJUb8gDF90gMHx597nq-yOurpSQC7lQizdjhzWWsNl3xpVUgOmkE"/>
-                        </div>
+                            <img src="https://i.ytimg.com/vi/6sOztVBaO0Y/maxresdefault.jpg"/>
                         <div class="card_content">
                             <h2 class="card_title">Tiny Home Movement</h2>
                             <p class="card_text">Know the Movement what exactly is the Hype on Tiny Homes</p>
                             <button class="btn card_btn"><a href="https://calculator.me/real-estate/tiny-homes.php">See More</a></button>
+                        </div>
                         </div>
                     </div>
                 </li>

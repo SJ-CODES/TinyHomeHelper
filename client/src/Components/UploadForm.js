@@ -58,6 +58,7 @@ const UploadForm = () => {
                             }).then(response => response.json())
                                 .then(result => {
                                     console.log(result)
+                                    window.location.href= '/PhotoGallery'
                                 })
 
 
@@ -79,7 +80,7 @@ const UploadForm = () => {
                     <label>
                         <input type="file" name="file" accept="image/*" multiple={false} onChange={handleChange} />
                         <input type="text" name="username" onChange={handleNameChange} placeholder="Enter Username" />
-                        <button class="uploadBtn" onClick={uploadHandler}>Upload</button> 
+                        <button className="uploadBtn" onClick={uploadHandler}>Upload</button> 
                     </label>
                    
                 </form>
