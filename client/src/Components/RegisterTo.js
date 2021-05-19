@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 // import { AUTH } from "../constants/userConstants";
-import { login, register } from "../actions/auth";
+import { guestRegister, login, register } from "../actions/auth";
 import {
 	Avatar,
 	Button,
@@ -10,16 +10,16 @@ import {
 	Typography,
 	Container,
 } from "@material-ui/core";
-import useStyles from "../Components/Auth/AuthStyles";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 // import Icon from "../Components/Auth/icon";
 import Input from "../Components/Auth/Input";
 // import Feed from "../Components/Feed";
 
+
 const initialState = {
-	lastname: "",
+	username: "",
 	email: "",
 	password: "",
 };
@@ -29,7 +29,11 @@ function RegisterTo() {
 	const [isRegister, setIsRegister] = useState(false);
 	const dispatch = useDispatch();
 	const history = useHistory();
-	const classes = useStyles();
+	const guestForm = {
+		username:"Guest",
+		email:"guest@gmail.com",
+		password:"123"
+	}
 
 	const [showPassword, setShowPassword] = useState(false);
 	const handleShowPassword = () => setShowPassword(!showPassword);
@@ -49,6 +53,15 @@ function RegisterTo() {
 			dispatch(login(form, history));
 		}
 	};
+
+	const handleGuestSubmit = (e) => {
+		e.preventDefault()
+		if (isRegister){
+			dispatch(guestRegister(guestForm, history))
+		} else {
+			dispatch(login(guestForm, history))
+		}
+	}
 	// const googleSuccess = async (res) => {
 	// 	const result = res?.profileObj;
 	// 	const token = res?.tokenId;
@@ -72,14 +85,14 @@ function RegisterTo() {
 		<div className='register'>
 			{/* <Feed /> */}
 			<Container component='main' maxWidth='xs'>
-				<Paper className={classes.paper} elevation={3}>
-					<Avatar className={classes.avatar}>
+				<Paper elevation={3}>
+					<Avatar >
 						<LockOutlinedIcon />
 					</Avatar>
 					<Typography component='h1' variant='h5'>
 						{isRegister ? "Register" : "Login"}
 					</Typography>
-					<form className={classes.form} onSubmit={handleSubmit}>
+					<form  onSubmit={handleSubmit}>
 						<Grid container spacing={2}>
 							{isRegister && (
 								<>
@@ -118,15 +131,15 @@ function RegisterTo() {
 							fullWidth
 							variant='contained'
 							color='primary'
-							className={classes.submit}
 						>
 							{isRegister ? "Register" : "Login"}
 						</Button>
+						
 						{/* <GoogleLogin
 							clientId='564033717568-e5p23rhvcs4i6kffgsbci1d64r8hp6fn.apps.googleusercontent.com'
 							render={(renderProps) => (
 								<Button
-									className={classes.googleButton}
+									className={googleButton}
 									color='primary'
 									fullWidth
 									onClick={renderProps.onClick}
@@ -151,6 +164,16 @@ function RegisterTo() {
 							</Grid>
 						</Grid>
 					</form>
+				<form onSubmit={handleGuestSubmit}>
+								<Button
+									type='submit'
+									fullWidth
+									variant='contained'
+									color='primary'
+								>
+									 Login as Guest
+								</Button>
+				</form>
 				</Paper>
 			</Container>
 		</div>

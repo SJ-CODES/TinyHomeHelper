@@ -30,14 +30,14 @@ function App() {
 						<Footer />
 					</Route>
 					<Route exact path='/login' component={RegisterTo}>
-						<Header />
+						
 						<RegisterTo />
-						<Footer />
+						
 					</Route>
 					<Route exact path='/registration' component={RegisterTo}>
-						<Header />
+						
 						<RegisterTo />
-						<Footer />
+						
 					</Route>
 					<Route exact path='/about-us' component={AboutUs}>
 						<Header />

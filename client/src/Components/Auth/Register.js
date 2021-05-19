@@ -10,7 +10,6 @@ import {
 	Typography,
 	Container,
 } from "@material-ui/core";
-import useStyles from "./AuthStyles";
 import { useHistory } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
@@ -20,7 +19,7 @@ import Input from "./Input";
 const initialState = {
 	firstName: "",
 	lastName: "",
-	email: "",
+	email: "", 
 	password: "",
 	confirmPassword: "",
 };

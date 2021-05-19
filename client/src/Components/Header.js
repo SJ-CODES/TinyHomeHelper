@@ -4,10 +4,11 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button'
 
 import decode from 'jwt-decode';
 import * as actionType from '../constants/userConstants';
-import useStyles from '../Components/Auth/AuthStyles';
+// import useStyles from '../Components/Auth/AuthStyles';
 import "./CSS/Header.css";
 import HomeIcon from "@material-ui/icons/Home"
 
@@ -17,12 +18,11 @@ const Header = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const history = useHistory();
-    const classes = useStyles();
   
     const logout = () => {
       dispatch({ type: actionType.LOGOUT });
   
-      history.push('/auth');
+      history.push('/login');
   
       setUser(null);
     };
@@ -48,7 +48,7 @@ const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/aboutus">About Us</Nav.Link>
-          <Nav.Link href="/login">Login/Register</Nav.Link>
+          {/* <Nav.Link href="/login">Login/Register</Nav.Link> */}
           <NavDropdown title="Community" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/communityforum">
               Community Forum
@@ -68,8 +68,15 @@ const Header = () => {
             </NavDropdown.Item>
             <NavDropdown.Divider />
           </NavDropdown>
-        </Nav>
+        </Nav> 
       </Navbar.Collapse>
+      <Nav> 
+        {user?.result ? (
+            <Button variant="contained" color="secondary" onClick={logout}>Logout</Button>
+          ) : (
+            <Button component={Link} to="/login" variant="contained" color="primary">Sign In</Button>
+        )}
+      </Nav>
     </Navbar>
   );
 }

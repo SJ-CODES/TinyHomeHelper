@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../actions/postActions";
 
 function Feed() {
-	//   const [currentId, setCurrentId] = useState(0);
+
 	const dispatch = useDispatch();
 
 	const allPosts = useSelector((state) => state.postsReducer.posts);

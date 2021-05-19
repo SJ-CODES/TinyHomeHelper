@@ -16,7 +16,7 @@ function EducateHomepage() {
                         </div>
                         <div class="card_content">
                             <h2 class="card_title">Tiny Home Movement</h2>
-                            <p class="card_text">Know the Movement what exactly is the Hype on Tiny Homes</p>
+                            <p class="card_text">Know the Movement and what exactly is the Hype on Tiny Homes</p>
                             <button class="btn card_btn"><a href="https://calculator.me/real-estate/tiny-homes.php">See More</a></button>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ function EducateHomepage() {
                         </div>
                         <div class="card_content">
                             <h2 class="card_title">Inspiring Tiny Home Designs: Check out here</h2>
-                            <p class="card_text">Wondering How To Design Your New  Tiny Home? Find out now</p>
+                            <p class="card_text">Wondering How To Design Your New Tiny Home? Find out now</p>
                             <button class="btn card_btn"><a href="https://tinyhousedesign.com/category/tiny-house-project/">See More</a></button>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ function EducateHomepage() {
                         </div>
                         <div class="card_content">
                             <h2 class="card_title">Tiny Home What is the Actually Expense?</h2>
-                            <p class="card_text">Check Out What it Actually Can Cost To Build Your Tiny Space</p>
+                            <p class="card_text">Check Out What it Can Actually Cost To Build Your Tiny Space</p>
                             <button class="btn card_btn"><a hred="https://www.homeadvisor.com/cost/architects-and-engineers/build-a-tiny-house/">See More</a></button>
                         </div>
                     </div>
@@ -102,8 +102,8 @@ function EducateHomepage() {
                         <img src="https://www.wellfedhomestead.com/wp-content/uploads/2016/02/prosandconsoftinyhouses.jpg"/>
                     </div>
                     <div class="card_content">
-                        <h2 class="card_title">Pros vs Cons of Tiny Lving</h2>
-                        <p class="card_text">Are Their Any Disadvantages of Owning Tiny Homes</p>
+                        <h2 class="card_title">Pros vs Cons of Tiny Living</h2>
+                        <p class="card_text">Are There Any Disadvantages to Owning Tiny Homes?</p>
                         <button class="btn card_btn">< a hred="https://goloadup.com/pros-cons-tiny-house-living/">See More</a></button>
                     </div>
                 </div>

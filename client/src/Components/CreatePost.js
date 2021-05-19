@@ -28,7 +28,6 @@ function CreatePost({ currentId, setCurrentId }) {
   const history = useHistory();
 
   const clear = () => {
-    // setCurrentId(0);
     setPostData({ title: "", body: "", tags: "", selectedFile: "" });
   };
 
@@ -42,15 +41,10 @@ function CreatePost({ currentId, setCurrentId }) {
     console.log(postData)
     e.preventDefault();
 
-    // if (currentId === 0) {
     dispatch(createPost(postData));
     dispatch(getPosts());
     clear();
     
-    // } else {
-    //   dispatch(updatePost(currentId, postData));
-    //   clear();
-    // }
   };
 
   return (
@@ -83,25 +77,6 @@ function CreatePost({ currentId, setCurrentId }) {
             setPostData({ ...postData, body: e.target.value })
           }
         />
-        {/* <TextField
-          name="tags"
-          variant="outlined"
-          label="Tags (coma separated)"
-          fullWidth
-          value={postData.tags}
-          onChange={(e) =>
-            setPostData({ ...postData, tags: e.target.value.split(",") })
-          }
-        /> */}
-        {/* <div>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) =>
-              setPostData({ ...postData, selectedFile: base64 })
-            }
-          />
-        </div> */}
         <Button
           variant="contained"
           color="primary"
