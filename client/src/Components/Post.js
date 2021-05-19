@@ -1,7 +1,6 @@
 import React from "react";
-import "./CSS/Post.css";
-import { Avatar, Button } from '@material-ui/core';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import "./CSS/Post.css"
+import { Avatar, Button, Paper } from '@material-ui/core';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
@@ -33,26 +32,26 @@ function Post({ post, setCurrentId }) {
     // history.push(`/posts/${post._id}`);
     console.log(post)
   };
-
-  // const postItem = allPosts.map((post) => {
-  //   console.log(postItem.user)
     return (
+      <Paper>
       <div className="post">
       <div className="post__top">
         {/* <Avatar src={} className="post__avatar" /> */}
         <div className="post__topInfo">
           <h2>{post?.title}</h2>
-          {/* <h3>{post.user}</h3> */}
+          {/* <h3>{post?.user}</h3> */}
           {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
         </div>
       </div>
       <div className="post__bottom">
-        {/* <p>{post.message.split(' ').splice(0, 20).join(' ')}...</p> */}
         <p>{post?.body}</p>
       </div>
+      {/* <div className="post__image">
+        <img src={image} alt="" />
+      </div> */}
       <div className="post__options">
           <div className="post__option">
-            <ThumbUpIcon disabled={!user?.result} onClick={() => dispatch(likePost(post._id))} />
+          <Button size="small" color="primary" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}/>
             <Likes />
           </div>
           <div className="post__option">
@@ -69,6 +68,7 @@ function Post({ post, setCurrentId }) {
           </div>
         </div>
     </div>
+    </Paper>
     )
 }
 
