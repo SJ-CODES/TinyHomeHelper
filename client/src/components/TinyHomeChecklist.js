@@ -7,7 +7,7 @@ import BuildIcon from '@material-ui/icons/Build';
 function TinyHomeChecklist() {
     return (
         <div>
-            <h1>What would you need to build a Base Tiny Home? </h1>
+            <h1>What would you need to build a Base Tiny Home?? </h1>
             <h2>Fundamental Planning and Sourcing of Resources: </h2>
             <ul>     
                      <LibraryAddCheckIcon />
