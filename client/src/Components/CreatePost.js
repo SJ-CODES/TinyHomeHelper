@@ -3,7 +3,6 @@ import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatePost, getPosts } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
-import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
 
 function CreatePost({ currentId, setCurrentId }) {
@@ -40,11 +39,9 @@ function CreatePost({ currentId, setCurrentId }) {
   const handleSubmit = async (e) => {
     console.log(postData)
     e.preventDefault();
-
     dispatch(createPost(postData));
     dispatch(getPosts());
     clear();
-    
   };
 
   return (
@@ -79,7 +76,7 @@ function CreatePost({ currentId, setCurrentId }) {
         />
         <Button
           variant="contained"
-          color="primary"
+          color="light"
           size="large"
           type="submit"
           fullWidth
@@ -88,7 +85,7 @@ function CreatePost({ currentId, setCurrentId }) {
         </Button>
         <Button
           variant="contained"
-          color="secondary"
+          color="light"
           size="small"
           onClick={clear}
           fullWidth

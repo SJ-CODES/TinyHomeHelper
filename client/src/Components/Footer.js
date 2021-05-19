@@ -8,27 +8,27 @@ import "./CSS/Footer.css";
 function Footer() {
     return (
         <div className="footer">
-            <h3>Meet The Developers: </h3>
+            <h3> The Devs </h3>
             <div className="meetDevs"> 
-                Summer Johnson 
+                <p>Summer Johnson </p>
                     <div>&nbsp;&nbsp;&nbsp;
-                        <a><GitHubIcon href="https://github.com/SJ-CODES"  /></a>
-                        <a><LinkedInIcon href="https://www.linkedin.com/in/summer-johnson-057910111/"  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/SJ-CODES" ><GitHubIcon  /></a>
+                        <a href="https://www.linkedin.com/in/summer-johnson-057910111/" ><LinkedInIcon  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
-                Layton Avery 
+                <p>Layton Avery</p>
                     <div>&nbsp;&nbsp;&nbsp;
-                        <a><GitHubIcon href="https://github.com/LaytonAvery"  /></a>
-                        <a><LinkedInIcon href="https://www.linkedin.com/in/laytonavery/"  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/LaytonAvery"><GitHubIcon  /></a>
+                        <a href="https://www.linkedin.com/in/laytonavery/"><LinkedInIcon   /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
-                Andres Corredor 
+                <p>Andres Corredor</p>
                     <div>&nbsp;&nbsp;&nbsp;
-                        <a><GitHubIcon href="https://github.com/Andres-Andretti"  /></a>
-                        <a><LinkedInIcon href="https://www.linkedin.com/in/andres-corredor-b30463b1/"  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/Andres-Andretti" ><GitHubIcon  /></a>
+                        <a href="https://www.linkedin.com/in/andres-corredor-b30463b1/" ><LinkedInIcon  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
-                Megan Mason  
+                <p> Megan Mason</p>
                     <div>&nbsp;&nbsp;&nbsp;
-                    <a><GitHubIcon path="https://github.com/mmason27"  /></a>
-                    < a><LinkedInIcon href="https://www.linkedin.com/in/megan-m-mason/"  /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://github.com/mmason27"><GitHubIcon   /></a>
+                        < a href="https://www.linkedin.com/in/megan-m-mason/"><LinkedInIcon   /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
             </div>
         </div>
