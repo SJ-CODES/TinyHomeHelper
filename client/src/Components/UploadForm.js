@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { storage } from '../firebase/tinyHomeStorage'
 import PhotoGalleryDisplay from './PhotoGalleryDisplay';
+import '../Components/CSS/PhotoGallery.css'
 
 const UploadForm = () => {
 
@@ -57,6 +58,7 @@ const UploadForm = () => {
                             }).then(response => response.json())
                                 .then(result => {
                                     console.log(result)
+                                    window.location.href= '/PhotoGallery'
                                 })
 
 
@@ -73,14 +75,19 @@ const UploadForm = () => {
 
         return (
             <div>
-                <form>
-                    <input type="file" name="file" accept="image/*" multiple={false} onChange={handleChange} />
-                    <input type="text" name="username" onChange={handleNameChange} placeholder="Enter Username" />
-                   <button onClick={uploadHandler}>Upload</button> 
+                <h1 class="titleUpload">TinyHomeHelper Gallery</h1>
+                <form class="galleryInput">
+                    <label>
+                        <input type="file" name="file" accept="image/*" multiple={false} onChange={handleChange} />
+                        <input type="text" name="username" onChange={handleNameChange} placeholder="Enter Username" />
+                        <button className="uploadBtn" onClick={uploadHandler}>Upload</button> 
+                    </label>
+                   
                 </form>
                     <div className="output">
                         {error && <div className="error">{error} </div>}
                         {image && <div> {image.name}</div>}
+                        
                     </div>
                 
                
