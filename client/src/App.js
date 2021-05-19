@@ -1,23 +1,20 @@
 import PhotoGalleryDisplay from "./Components/PhotoGalleryDisplay";
-import ForumHeader from "./Components/ForumHeader";
 import "./Components/CSS/PhotoGallery.css";
 import LoginScreen from "./Components/LoginScreen";
 import RegisterScreen from "./Components/RegisterScreen";
 import CommunityForum from "./Components/CommunityForum";
 import EducateHomepage from "./Components/EducateHomepage";
 import "bootswatch/dist/minty/bootstrap.min.css";
-// import "./Components/CSS/Index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import AboutUs from "./Components/AboutUs";
 import "./Components/CSS/App.css";
-import React, { Component } from "react";
+import React from "react";
 import TinyHomeChecklist from "./Components/TinyHomeChecklist";
-
 import UploadForm from "./Components/UploadForm";
-import { useState } from "react"
+
 function App() {
 	return (
 		<div className='App'>
