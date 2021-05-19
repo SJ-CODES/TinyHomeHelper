@@ -49,6 +49,7 @@ body {
   margin: 0 auto;
   padding: 0 1.25rem;
   font-family: 'Lato', sans-serif;
+  max-height: 70%;
 }
 
 button {
@@ -82,22 +83,28 @@ button {
 
 #carousel__slide1 {
   background-image: url(./Assets/tinyhousecarouselimg1.jpeg);
-  object-fit: contain;
+  background-repeat: no-repeat;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #carousel__slide2 {
   background-image: url(./Assets/tinyhousecommunity.jpeg);
-  object-fit: contain;
+  background-repeat: no-repeat;
+  display: block;
+  background-size: auto, cover;
+
 }
 
 #carousel__slide3 {
   background-image: url(./Assets/tinyhousebeach.jpeg);
-  object-fit: contain;
+  background-repeat: no-repeat;
 }
 
 #carousel__slide4 {
   background-image: url(./Assets/tinyhouse1.jpeg);
-  object-fit: contain;
+  background-repeat: no-repeat;
 }
 
 ol, li {
@@ -130,9 +137,11 @@ a:hover {
   perspective: 100px;
 }
 
+/* this controls the carousel sizing */
 .carousel__viewport {
   position: absolute;
   top: 0;
+  padding-top: 30px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -141,6 +150,7 @@ a:hover {
   counter-reset: item;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  height: 80%;
 }
 
 .carousel__slide {
@@ -253,7 +263,7 @@ a:hover {
   z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
   background-position: center center;
   color: rgba(255, 255, 255, 0);
   font-size: 2.5rem;

@@ -87,7 +87,7 @@ function CreatePost({ currentId, setCurrentId }) {
             setPostData({ ...postData, body: e.target.value })
           }
         />
-        <TextField
+        {/* <TextField
           name="tags"
           variant="outlined"
           label="Tags (coma separated)"
@@ -96,7 +96,7 @@ function CreatePost({ currentId, setCurrentId }) {
           onChange={(e) =>
             setPostData({ ...postData, tags: e.target.value.split(",") })
           }
-        />
+        /> */}
         {/* <div>
           <FileBase
             type="file"

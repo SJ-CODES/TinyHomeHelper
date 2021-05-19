@@ -4,6 +4,7 @@ import CreatePost from "./CreatePost";
 import Post from "./Post";
 import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../actions/postActions";
+// import ForumHeader from "./ForumHeader";
 
 function Feed() {
 	//   const [currentId, setCurrentId] = useState(0);
@@ -17,7 +18,6 @@ function Feed() {
 	}, []);
 
 	return (
-		//map through posts
 		<div className='feed'>
 			<CreatePost />
 			{allPosts.map((post) => (

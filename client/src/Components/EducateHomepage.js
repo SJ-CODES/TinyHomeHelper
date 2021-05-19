@@ -5,8 +5,8 @@ import checklistImage from "./CSS/Assets/checklistscreenshot.png"
 function EducateHomepage() {
     return (
         <div class="educateHomepage">
-            <div className="educateHeader">
-                <h1>New to the tiny home community and looking to get started on your journey? Start here.</h1>
+            <div>
+                <h1 className="educateHeader">New to the tiny home community and looking to get started on your journey? Start here.</h1>
             </div>
             <ul class="cards">
                 <li class="cards_item">

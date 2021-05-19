@@ -10,12 +10,21 @@ import {
 } from "../constants/postActionTypes";
 
 export const postsReducer = (
-	state = { isLoading: true, posts: [] },
+	state = { 
+		isLoading: true,
+		posts: [],
+		value: "",
+		filteredPosts: []},
 	action
 ) => {
 	// state is replaced with posts as the state takes place within the posts reducer
 	// cases return action.payload which is the post retrieved from api in the actions
 	switch (action.type) {
+		case "SEARCH": {
+			const {value} = action;
+			const filteredPosts = state.contents.filter((val) => val.includes(value));
+			return {...state, value, filteredPosts};
+		}
 		case "START_LOADING":
 			return { ...state, isLoading: true };
 		case "END_LOADING":

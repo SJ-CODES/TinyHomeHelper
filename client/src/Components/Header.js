@@ -1,6 +1,4 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import "./CSS/Header.css";
@@ -9,7 +7,7 @@ function Header() {
 
   return (
     <div className="header">
-      <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
+      <Navbar collapseOnSelect expand="sm" bg="light" variant="light" fixed="top">
         <Navbar.Brand href="/">TinyHomeHelper</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

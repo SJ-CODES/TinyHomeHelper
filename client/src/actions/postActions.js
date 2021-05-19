@@ -1,8 +1,12 @@
 
 import * as api from "../api/api";
-import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from "../constants/postActionTypes";
+import { START_LOADING, END_LOADING, SEARCH, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, FETCH_ALL_POSTS } from "../constants/postActionTypes";
 
 // Action Creators
+
+export const search = (value) => {
+  return {type: SEARCH, value}
+}
 
 export const getPost = (id) => async (dispatch) => {
   try {

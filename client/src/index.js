@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "bootswatch/dist/minty/bootstrap.min.css";
+// import "bootswatch/dist/minty/bootstrap.min.css";
 
 import "./Components/CSS/Index.css";
 import reportWebVitals from "./reportWebVitals";
