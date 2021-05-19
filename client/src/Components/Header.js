@@ -1,49 +1,42 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-
 import "./CSS/Header.css";
+import HomeIcon from "@material-ui/icons/Home"
 
 function Header() {
-
   return (
-    <div className="header">
-      <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
-        
-        <Navbar.Brand href="/"><p className="headerTitle">TinyHomeHelper</p></Navbar.Brand>
-        
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/aboutus">About Us</Nav.Link>
-            <NavDropdown title="Community" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/login">Login/Register</NavDropdown.Item>
-
-              <NavDropdown.Item href="/communityforum">
-                Community Forum
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/photoGallery">Gallery</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                {/* Option #3 */}
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Resources" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/TinyHomeChecklist">The Checklist</NavDropdown.Item>
-              <NavDropdown.Item href="/educationalresources">Education</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.youtube.com/user/livingbigtinyhouse">Videos</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                {/* Option #4 */}
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+    <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
+      <Navbar.Brand href="/">
+        <p className="headerTitle"><HomeIcon/>TinyHomeHelper</p>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/aboutus">About Us</Nav.Link>
+          <Nav.Link href="/login">Login/Register</Nav.Link>
+          <NavDropdown title="Community" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="/communityforum">
+              Community Forum
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/photoGallery">Photo Gallery</NavDropdown.Item>
+            <NavDropdown.Divider />
+          </NavDropdown>
+          <NavDropdown title="Resources" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="/TinyHomeChecklist">
+              Getting Started Checklist
+            </NavDropdown.Item>
+            <NavDropdown.Item href="/educationalresources">
+              Tiny Home Articles
+            </NavDropdown.Item>
+            <NavDropdown.Item href="https://www.youtube.com/user/livingbigtinyhouse">
+              Youtube Channel
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-
 }
 
 export default Header;
