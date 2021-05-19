@@ -33,13 +33,12 @@ function Post({ post, setCurrentId }) {
     console.log(post)
   };
     return (
-      <Paper>
+      <Paper className="postBody">
       <div className="post">
       <div className="post__top">
-        {/* <Avatar src={} className="post__avatar" /> */}
         <div className="post__topInfo">
           <h2>{post?.title}</h2>
-          {/* <h3>{post?.user}</h3> */}
+          <div className="avatar"><Avatar/><h6 className="userName">user {post?.user}</h6></div>
           {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
         </div>
       </div>

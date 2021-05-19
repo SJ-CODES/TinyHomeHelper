@@ -3,7 +3,6 @@ import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost, updatePost, getPosts } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
-import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
 
 function CreatePost({ currentId, setCurrentId }) {
@@ -28,7 +27,6 @@ function CreatePost({ currentId, setCurrentId }) {
   const history = useHistory();
 
   const clear = () => {
-    // setCurrentId(0);
     setPostData({ title: "", body: "", tags: "", selectedFile: "" });
   };
 
@@ -41,16 +39,9 @@ function CreatePost({ currentId, setCurrentId }) {
   const handleSubmit = async (e) => {
     console.log(postData)
     e.preventDefault();
-
-    // if (currentId === 0) {
     dispatch(createPost(postData));
     dispatch(getPosts());
     clear();
-    
-    // } else {
-    //   dispatch(updatePost(currentId, postData));
-    //   clear();
-    // }
   };
 
   return (
@@ -83,28 +74,9 @@ function CreatePost({ currentId, setCurrentId }) {
             setPostData({ ...postData, body: e.target.value })
           }
         />
-        {/* <TextField
-          name="tags"
-          variant="outlined"
-          label="Tags (coma separated)"
-          fullWidth
-          value={postData.tags}
-          onChange={(e) =>
-            setPostData({ ...postData, tags: e.target.value.split(",") })
-          }
-        /> */}
-        {/* <div>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={({ base64 }) =>
-              setPostData({ ...postData, selectedFile: base64 })
-            }
-          />
-        </div> */}
         <Button
           variant="contained"
-          color="primary"
+          color="light"
           size="large"
           type="submit"
           fullWidth
@@ -113,7 +85,7 @@ function CreatePost({ currentId, setCurrentId }) {
         </Button>
         <Button
           variant="contained"
-          color="secondary"
+          color="light"
           size="small"
           onClick={clear}
           fullWidth
