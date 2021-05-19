@@ -1,6 +1,6 @@
 import React from "react";
 import "./CSS/Post.css"
-import { Avatar, Button } from '@material-ui/core';
+import { Avatar, Button, Paper } from '@material-ui/core';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
@@ -33,6 +33,7 @@ function Post({ post, setCurrentId }) {
     console.log(post)
   };
     return (
+      <Paper>
       <div className="post">
       <div className="post__top">
         {/* <Avatar src={} className="post__avatar" /> */}
@@ -67,6 +68,7 @@ function Post({ post, setCurrentId }) {
           </div>
         </div>
     </div>
+    </Paper>
     )
 }
 

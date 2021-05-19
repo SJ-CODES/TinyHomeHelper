@@ -106,8 +106,16 @@ ol, li {
   padding: 0;
 }
 
+.homeButtons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
 .button {
-  font: bold 2.5rem Arial;
+  font: bold 1.5rem Arial;
   text-decoration: none;
   background-color: #fffefe00;
   color: #333333;

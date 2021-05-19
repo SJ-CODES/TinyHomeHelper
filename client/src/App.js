@@ -45,6 +45,7 @@ function App() {
 						<PhotoGalleryDisplay />
 					</Route>
 					<Route exact path='/communityforum' component={CommunityForum}>
+						<Header/>
 						<CommunityForum />
 						<Footer />
 						

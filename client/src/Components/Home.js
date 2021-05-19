@@ -5,13 +5,17 @@ import "./CSS/Home.css"
 function Home() {
     return (
         <div className="home">
+            <div className="homeButtons">
+                <a href="/educationalresources" class="button">Build Your Dream Home</a>
+                <a href="/photogallery" class="button">Get Inspired</a>
+                <a href="/communityforum" class="button">Find Your Community</a>
+            </div>
             <section class="carousel" aria-label="Gallery">
             <ol class="carousel__viewport">
                 <li id="carousel__slide1"
                     tabindex="0"
                     class="carousel__slide">
                 <div class="carousel__snapper">
-                    <a href="/educationalresources" class="button">Build Your Tiny Dream Home</a>
                     <a href="#carousel__slide4"
                     class="carousel__prev">Go to last slide</a>
                     <a href="#carousel__slide2"
@@ -22,7 +26,6 @@ function Home() {
                     tabindex="0"
                     class="carousel__slide">
                 <div class="carousel__snapper">
-                    <a href="/communityforum" class="button">Find Your Community</a>
                 </div>
                 <a href="#carousel__slide1"
                     class="carousel__prev">Go to previous slide</a>
@@ -32,7 +35,8 @@ function Home() {
                 <li id="carousel__slide3"
                     tabindex="0"
                     class="carousel__slide">
-                <div class="carousel__snapper"><a href="/photogallery" class="button">Get Inspired</a></div>
+                <div class="carousel__snapper">
+                    </div>
                 <a href="#carousel__slide2"
                     class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide4"
@@ -41,7 +45,8 @@ function Home() {
                 <li id="carousel__slide4"
                     tabindex="0"
                     class="carousel__slide">
-                <div class="carousel__snapper"><a href="/aboutus" class="button">Our Mission</a></div>
+                <div class="carousel__snapper">
+                    </div>
                 <a href="#carousel__slide3"
                     class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide1"
