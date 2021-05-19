@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,9 +5,6 @@ import { createPost, updatePost, getPosts } from "../actions/postActions";
 import { useHistory } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import "./CSS/CreatePost.css";
-
-//still need to add styling, but want to see how this looks in react first
-//where are these props coming from??
 
 function CreatePost({ currentId, setCurrentId }) {
 
@@ -87,7 +83,7 @@ function CreatePost({ currentId, setCurrentId }) {
             setPostData({ ...postData, body: e.target.value })
           }
         />
-        <TextField
+        {/* <TextField
           name="tags"
           variant="outlined"
           label="Tags (coma separated)"
@@ -96,7 +92,7 @@ function CreatePost({ currentId, setCurrentId }) {
           onChange={(e) =>
             setPostData({ ...postData, tags: e.target.value.split(",") })
           }
-        />
+        /> */}
         {/* <div>
           <FileBase
             type="file"
@@ -130,47 +126,3 @@ function CreatePost({ currentId, setCurrentId }) {
 }
 
 export default CreatePost;
-
-// function CreatePost() {
-//   const [input, setInput] = useState("");
-//   const [imageURL, setImageURL] = useState("");
-
-//   const handleSubmit = (event) => {
-//     //this prevents the page from refreshing
-//     event.preventDefault();
-
-//     //put data in the database here
-
-//     setInput("");
-//     setImageURL("");
-//   };
-
-//   return (
-//     <div className="createPost">
-//       <div className="createPost__top">
-//         <Avatar />
-//         <form>
-//           <input
-//             value={input}
-//             onChange={(e) => setInput(e.target.value)}
-//             type="text"
-//             placeholder="What's on your mind?"
-//           />
-//           <input
-//             value={imageURL}
-//             onChange={(e) => setImageURL(e.target.value)}
-//             type="text"
-//             placeholder="Image URL (Optional)"
-//           />
-//           <button onClick={handleSubmit} type="submit">
-//             Enter
-//           </button>
-//         </form>
-//       </div>
-
-//       <div className="createPost__bottom"></div>
-//     </div>
-//   );
-// }
-
-// export default CreatePost;
