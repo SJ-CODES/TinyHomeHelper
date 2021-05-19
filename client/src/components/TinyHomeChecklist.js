@@ -1,7 +1,6 @@
 import React from 'react'
 import LibraryAddCheckIcon from '@material-ui/icons/LibraryAddCheck';
 import BuildIcon from '@material-ui/icons/Build';
-<
 import './CSS/TinyHomeChecklist.css'
 
 
