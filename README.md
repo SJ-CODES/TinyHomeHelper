@@ -1,5 +1,7 @@
 # capstoneProject
 
+![](https://user-images.githubusercontent.com/71364408/122131044-97fd0800-ce06-11eb-9f63-e5055c0a98bf.png)
+
 ## Purpose:
 This application was created for the purpose of creating a platform for people who are interested in building a 
 tiny home and providing them with resources so that they may be educated on the process from start to finish.
