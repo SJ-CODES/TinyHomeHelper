@@ -1,4 +1,4 @@
-# capstoneProject
+# TinyHomeHelper CapstoneProject
 
 ![](https://user-images.githubusercontent.com/71364408/122131044-97fd0800-ce06-11eb-9f63-e5055c0a98bf.png)
 
